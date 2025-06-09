@@ -40,10 +40,6 @@ void PlayScene::Initialize() {
     AddNewControlObject(UIGroup = new Group());
     ReadMap();
     ReadEnemyWave();
-    imgTarget = new Engine::Image("play/target.png", 0, 0);
-    imgTarget->Visible = false;
-    preview = nullptr;
-    UIGroup->AddNewObject(imgTarget);
     // Start BGM.
     bgmId = AudioHelper::PlayBGM("play.ogg");
 }
@@ -86,7 +82,7 @@ void PlayScene::OnKeyDown(int keyCode) {
     
 }
 void PlayScene::ReadMap() {
-    std::string filename = std::string("Resource/map") + std::to_string(MapId) + ".txt";
+    std::string filename = std::string("Resource/level") + std::to_string(MapId) + ".txt";
     // Read map file.
     char c;
     std::vector<bool> mapData;

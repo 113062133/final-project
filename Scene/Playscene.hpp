@@ -9,14 +9,6 @@
 #include "Engine/IScene.hpp"
 #include "Engine/Point.hpp"
 
-class Turret;
-namespace Engine {
-    class Group;
-    class Image;
-    class Label;
-    class Sprite;
-}   // namespace Engine
-
 class PlayScene final : public Engine::IScene {
 private:
     enum TileType {
@@ -26,11 +18,6 @@ private:
     };
     ALLEGRO_SAMPLE_ID bgmId;
     std::shared_ptr<ALLEGRO_SAMPLE_INSTANCE> deathBGMInstance;
-
-protected:
-    int lives;
-    int money;
-    int SpeedMult;
 
 public:
     static bool DebugMode;
@@ -42,22 +29,12 @@ public:
     static const Engine::Point EndGridPoint;
     static const std::vector<int> code;
     int MapId;
-    float ticks;
-    float deathCountDown;
     // Map tiles.
     Group *TileMapGroup;
     Group *GroundEffectGroup;
     Group *DebugIndicatorGroup;
-    Group *BulletGroup;
-    Group *TowerGroup;
-    Group *EnemyGroup;
     Group *EffectGroup;
     Group *UIGroup;
-    Engine::Label *UIMoney;
-    Engine::Label *UILives;
-    Engine::Image *imgTarget;
-    Engine::Sprite *dangerIndicator;
-    Turret *preview;
     std::vector<std::vector<TileType>> mapState;
     std::vector<std::vector<int>> mapDistance;
     std::list<std::pair<int, float>> enemyWaveData;
