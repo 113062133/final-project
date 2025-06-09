@@ -10,6 +10,7 @@
 #include "Engine/Resources.hpp"
 #include "PlayScene.hpp"
 #include "Scene/StartScene.h"
+#include "UI/Component/Image.hpp"
 #include "UI/Component/ImageButton.hpp"
 #include "UI/Component/Label.hpp"
 
@@ -20,6 +21,7 @@ void StartScene::Initialize() {
     int halfH = h / 2;
     Engine::ImageButton *btn;
 
+    //AddNewObject(new Engine::Image("stage-select/background.png", 0, 0, w, h));
     AddNewObject(new Engine::Label("Level Devil", "pirulen.ttf", 120, halfW, halfH / 3 + 50, 10, 255, 255, 255, 0.5, 0.5));
 
     btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/floor.png", halfW - 200, halfH / 2 + 200, 400, 100);
