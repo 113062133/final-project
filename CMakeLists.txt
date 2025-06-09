@@ -48,8 +48,6 @@ add_executable(LevelDevil
     Scene/PlayScene.hpp
     Scene/SettingsScene.cpp
     Scene/SettingsScene.hpp
-    Scene/StageSelectScene.cpp
-    Scene/StageSelectScene.hpp
     Scene/StartScene.cpp
     Scene/StartScene.h
     Scene/WinScene.cpp
