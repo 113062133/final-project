@@ -87,10 +87,11 @@ void StartScene::Initialize() {
     btn->SetOnClickCallback(std::bind(&StartScene::PlayOnClick, this, 1));
     AddNewControlObject(btn);
 
-    btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/floor.png", halfW - 200, halfH / 2 + 200, 70, 70);
+    btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/floor.png", w - 85, halfH + 190, 70, 70);
     btn->SetOnClickCallback(std::bind(&StartScene::PlayOnClick, this, 1));
     AddNewControlObject(btn);
-
+    
+    //setting button
     btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/floor.png", 10, h - 150, 350, 130);
     btn->SetOnClickCallback(std::bind(&StartScene::SettingsOnClick, this, 2));
     AddNewControlObject(btn);
