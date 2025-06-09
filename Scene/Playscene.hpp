@@ -72,15 +72,9 @@ public:
     void OnMouseMove(int mx, int my) override;
     void OnMouseUp(int button, int mx, int my) override;
     void OnKeyDown(int keyCode) override;
-    void Hit();
-    int GetMoney() const;
-    void EarnMoney(int money);
     void ReadMap();
     void ReadEnemyWave();
     void ConstructUI();
     void UIBtnClicked(int id);
-    bool CheckSpaceValid(int x, int y);
-    std::vector<std::vector<int>> CalculateBFSDistance();
-    // void ModifyReadMapTiles();
 };
 #endif   // PLAYSCENE_HPP
