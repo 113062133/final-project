@@ -1,39 +1,42 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#ifndef player_h
+#define player_h
 
 #include <allegro5/allegro.h>
-#include <allegro5/allegro_primitives.h> // 如你用畫方塊
+#include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_image.h>
-#include "Scene/Playscene.hpp"      // 如你用圖片
 
-class Player {
-public:
-    Player(float startX, float startY);
-    ~Player();
+#include "Scene/Playscene.hpp"
 
-    void update(float deltaTime);
-    void draw();
-    void handle_input(bool left, bool right, bool jump);
 
-    void set_on_ground(bool value);
-    bool is_on_ground() const;
+typedef enum {
+    PLAYER_IDLE, PLAYER_WALKING, PLAYER_DEAD
+} PLAYER_STATUS;
 
-    float get_x() const;
-    float get_y() const;
+typedef struct _Player{
+    Point coord; // coordinate of the player
+    Point dead_coord; //coordinate when player died
+    int speed; // TODO: CHANGE SPEED SCALED TO THE SIZE OF THE TILES
+    int direction;
+    int health;
+    
+    ALLEGRO_BITMAP* image;
+    uint8_t animation_tick; // For animation
+    DIRECTION player_dir;
+    uint8_t player_idle_animation_tick ;
+    uint8_t player_walking_animation_tick ;
+    uint8_t player_dying_animation_tick ;
+    
+    float knockback_angle;
+    uint8_t knockback_CD;
 
-private:
-    float x, y;
-    float vx, vy;
-    float width, height;
+    PLAYER_STATUS status;
 
-    bool onGround;
-    bool wantToJump;
+} Player;
 
-    const float MOVE_SPEED = 200.0f;
-    const float JUMP_SPEED = -400.0f;
-    const float GRAVITY = 800.0f;
+Player create_player(char * path,int row,int col);
+void update_player(Player * player, Map * map);
+void draw_player(Player * player, Point cam);
+void delete_player(Player * player);
+void hitPlayer(Player * player, Point enemy_coord, int damage);
 
-    ALLEGRO_BITMAP* sprite;
-};
-
-#endif
+#endif /* player_h */
