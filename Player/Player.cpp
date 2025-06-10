@@ -9,7 +9,7 @@ PlayScene *Player::getPlayScene() {
     return dynamic_cast<PlayScene *>(Engine::GameEngine::GetInstance().GetActiveScene());
 }
 
-Player::Player(std::string img, float x, float y, float w, float h) : Engine::Sprite(img, x, y, w, h), velocityY(0), onGround(true), playScene(getPlayScene()) {}
+Player::Player(std::string img, float x, float y, float w, float h) : Engine::Sprite(img, x, y, w, h, 0.5, 0), velocityY(0), onGround(true), playScene(getPlayScene()) {}
 void Player::Update(float deltaTime) {
     if (isMovingLeft) {
         x -= moveSpeed * deltaTime;
