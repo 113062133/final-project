@@ -20,6 +20,8 @@ public:
         TILE_DIRT,
         TILE_FLOOR,
         TILE_OCCUPIED,
+        TILE_PLAYER,
+        TILE_DOOR
     };
     static bool DebugMode;
     static const std::vector<Engine::Point> directions;
