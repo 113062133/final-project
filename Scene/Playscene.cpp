@@ -20,6 +20,7 @@
 #include "UI/Component/ImageButton.hpp"
 #include "UI/Component/Label.hpp"
 #include "allegro5/keycodes.h"
+//#include "Door/Door.hpp"
 
 bool PlayScene::DebugMode = false;
 const std::vector<Engine::Point> PlayScene::directions = { Engine::Point(-1, 0), Engine::Point(0, -1), Engine::Point(1, 0), Engine::Point(0, 1) };
@@ -140,7 +141,9 @@ void PlayScene::ReadMap() {
                     break;
                 case 3: 
                     mapState[i][j] = TILE_DOOR; 
-                    TileMapGroup->AddNewObject(new Engine::Image("play/door.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    door = new Door("play/door.png", (j+1) * BlockSize , i * BlockSize, BlockSize, BlockSize);
+                    AddNewObject(door);
                     break;
             }
             
