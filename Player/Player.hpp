@@ -3,6 +3,8 @@
 
 #include "Engine/Point.hpp"
 #include "Engine/Sprite.hpp"
+#include <vector>
+#include "Scene/Playscene.hpp"
 
 class PlayScene;
 
@@ -14,8 +16,11 @@ public:
     void Update(float deltaTime);
     void Draw() const;
     void Jump();
+    bool IsColliding(float ax, float ay, float aw, float ah,
+                 float bx, float by, float bw, float bh);
 private:
     float x, y, w, h;
+    std::vector<Floor>* floors;
     float velocityY;
     const float moveSpeed = 200.0f;
     const float gravity = 1500.0f;

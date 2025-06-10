@@ -32,6 +32,7 @@ const int PlayScene::BlockSize = 64;
 const Engine::Point PlayScene::SpawnGridPoint = Engine::Point(-1, 0);
 const Engine::Point PlayScene::EndGridPoint = Engine::Point(MapWidth, MapHeight - 1);
 
+
 Engine::Point PlayScene::GetClientSize() {
     return Engine::Point(MapWidth * BlockSize, MapHeight * BlockSize);
 }
@@ -111,7 +112,6 @@ void PlayScene::ReadMap() {
     std::string filename = std::string("Resource/level") + std::to_string(MapId) + ".txt";
     // Read map file.
     
-    std::vector<Floor> floors;
     std::ifstream fin(filename);
     std::string type;
     float x, y, w, h;
@@ -129,38 +129,6 @@ void PlayScene::ReadMap() {
         }
     }
     fin.close();
-    // Validate map data.
-    /*if (static_cast<int>(mapData.size()) != MapWidth * MapHeight)
-        throw std::ios_base::failure("Map data is corrupted.");*/
-    // Store map in 2d array.
-    /*mapState = std::vector<std::vector<TileType>>(MapHeight, std::vector<TileType>(MapWidth));
-    for (int i = 0; i < MapHeight; i++) {
-        for (int j = 0; j < MapWidth; j++) {
-            const int num = mapData[i * MapWidth + j];
-            switch (num){
-                case 0: 
-                    mapState[i][j] = TILE_DIRT; 
-                    TileMapGroup->AddNewObject(new Engine::Image("play/dirt.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
-                    break;
-                case 1: 
-                    mapState[i][j] = TILE_FLOOR; 
-                    TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
-                    break;
-                case 2: 
-                    mapState[i][j] = TILE_PLAYER; 
-                    TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
-                    player = new Player("play/player.png", j * BlockSize, i * BlockSize, BlockSize / 2, BlockSize);
-                    AddNewObject(player);
-                    break;
-                case 3: 
-                    mapState[i][j] = TILE_DOOR; 
-                    Spike * spike = new Spike("play/spike1.png", (j-3) * BlockSize, (i+1) * BlockSize, BlockSize, BlockSize/4);
-                    AddNewObject(spike);
-                    TileMapGroup->AddNewObject(new Engine::Image("play/door.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
-                    break;
-            }
-        }
-    }*/
 
 }
 
