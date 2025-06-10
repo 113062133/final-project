@@ -1,146 +1,146 @@
 [
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\Allegro5Exception.cpp.obj -c C:\\github\\final-project\\Engine\\Allegro5Exception.cpp",
-  "file": "C:/github/final-project/Engine/Allegro5Exception.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\Allegro5Exception.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Engine\\Allegro5Exception.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Engine/Allegro5Exception.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\AudioHelper.cpp.obj -c C:\\github\\final-project\\Engine\\AudioHelper.cpp",
-  "file": "C:/github/final-project/Engine/AudioHelper.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\AudioHelper.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Engine\\AudioHelper.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Engine/AudioHelper.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\Collider.cpp.obj -c C:\\github\\final-project\\Engine\\Collider.cpp",
-  "file": "C:/github/final-project/Engine/Collider.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\Collider.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Engine\\Collider.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Engine/Collider.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\GameEngine.cpp.obj -c C:\\github\\final-project\\Engine\\GameEngine.cpp",
-  "file": "C:/github/final-project/Engine/GameEngine.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\GameEngine.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Engine\\GameEngine.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Engine/GameEngine.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Engine/GameEngine.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\Group.cpp.obj -c C:\\github\\final-project\\Engine\\Group.cpp",
-  "file": "C:/github/final-project/Engine/Group.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\Group.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Engine\\Group.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Engine/Group.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Engine/Group.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\IControl.cpp.obj -c C:\\github\\final-project\\Engine\\IControl.cpp",
-  "file": "C:/github/final-project/Engine/IControl.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\IControl.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Engine\\IControl.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Engine/IControl.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Engine/IControl.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\IObject.cpp.obj -c C:\\github\\final-project\\Engine\\IObject.cpp",
-  "file": "C:/github/final-project/Engine/IObject.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\IObject.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Engine\\IObject.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Engine/IObject.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Engine/IObject.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\IScene.cpp.obj -c C:\\github\\final-project\\Engine\\IScene.cpp",
-  "file": "C:/github/final-project/Engine/IScene.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\IScene.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Engine\\IScene.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Engine/IScene.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Engine/IScene.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\LOG.cpp.obj -c C:\\github\\final-project\\Engine\\LOG.cpp",
-  "file": "C:/github/final-project/Engine/LOG.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\LOG.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Engine\\LOG.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Engine/LOG.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Engine/LOG.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\Point.cpp.obj -c C:\\github\\final-project\\Engine\\Point.cpp",
-  "file": "C:/github/final-project/Engine/Point.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\Point.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Engine\\Point.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Engine/Point.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Engine/Point.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\Resources.cpp.obj -c C:\\github\\final-project\\Engine\\Resources.cpp",
-  "file": "C:/github/final-project/Engine/Resources.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\Resources.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Engine\\Resources.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Engine/Resources.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Engine/Resources.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\Sprite.cpp.obj -c C:\\github\\final-project\\Engine\\Sprite.cpp",
-  "file": "C:/github/final-project/Engine/Sprite.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Engine\\Sprite.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Engine\\Sprite.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Engine/Sprite.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Engine/Sprite.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Platform\\Platform.cpp.obj -c C:\\github\\final-project\\Platform\\Platform.cpp",
-  "file": "C:/github/final-project/Platform/Platform.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Platform\\Platform.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Platform\\Platform.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Platform/Platform.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Player\\Player.cpp.obj -c C:\\github\\final-project\\Player\\Player.cpp",
-  "file": "C:/github/final-project/Player/Player.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Player\\Player.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Player\\Player.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Player/Player.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Player/Player.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Scene\\Playscene.cpp.obj -c C:\\github\\final-project\\Scene\\Playscene.cpp",
-  "file": "C:/github/final-project/Scene/Playscene.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Scene\\Playscene.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Scene\\Playscene.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Scene/Playscene.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Scene\\SettingsScene.cpp.obj -c C:\\github\\final-project\\Scene\\SettingsScene.cpp",
-  "file": "C:/github/final-project/Scene/SettingsScene.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Scene\\SettingsScene.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Scene\\SettingsScene.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Scene/SettingsScene.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Scene\\StartScene.cpp.obj -c C:\\github\\final-project\\Scene\\StartScene.cpp",
-  "file": "C:/github/final-project/Scene/StartScene.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Scene\\StartScene.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Scene\\StartScene.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Scene/StartScene.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Scene\\WinScene.cpp.obj -c C:\\github\\final-project\\Scene\\WinScene.cpp",
-  "file": "C:/github/final-project/Scene/WinScene.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Scene\\WinScene.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Scene\\WinScene.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Scene/WinScene.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Trap\\Saw.cpp.obj -c C:\\github\\final-project\\Trap\\Saw.cpp",
-  "file": "C:/github/final-project/Trap/Saw.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Trap\\Saw.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\Trap\\Saw.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/Trap/Saw.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\UI\\Component\\Image.cpp.obj -c C:\\github\\final-project\\UI\\Component\\Image.cpp",
-  "file": "C:/github/final-project/UI/Component/Image.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\UI\\Component\\Image.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\UI\\Component\\Image.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/UI/Component/Image.cpp",
   "output": "CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\UI\\Component\\ImageButton.cpp.obj -c C:\\github\\final-project\\UI\\Component\\ImageButton.cpp",
-  "file": "C:/github/final-project/UI/Component/ImageButton.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\UI\\Component\\ImageButton.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\UI\\Component\\ImageButton.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/UI/Component/ImageButton.cpp",
   "output": "CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\UI\\Component\\Label.cpp.obj -c C:\\github\\final-project\\UI\\Component\\Label.cpp",
-  "file": "C:/github/final-project/UI/Component/Label.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\UI\\Component\\Label.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\UI\\Component\\Label.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/UI/Component/Label.cpp",
   "output": "CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\UI\\Component\\Slider.cpp.obj -c C:\\github\\final-project\\UI\\Component\\Slider.cpp",
-  "file": "C:/github/final-project/UI/Component/Slider.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\UI\\Component\\Slider.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\UI\\Component\\Slider.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/UI/Component/Slider.cpp",
   "output": "CMakeFiles/LevelDevil.dir/UI/Component/Slider.cpp.obj"
 },
 {
-  "directory": "C:/github/final-project/build",
-  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\main.cpp.obj -c C:\\github\\final-project\\main.cpp",
-  "file": "C:/github/final-project/main.cpp",
+  "directory": "C:/Users/pengc/OneDrive/Documents/final-project/build",
+  "command": "c:\\Users\\pengc\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\main.cpp.obj -c C:\\Users\\pengc\\OneDrive\\Documents\\final-project\\main.cpp",
+  "file": "C:/Users/pengc/OneDrive/Documents/final-project/main.cpp",
   "output": "CMakeFiles/LevelDevil.dir/main.cpp.obj"
 }
 ]

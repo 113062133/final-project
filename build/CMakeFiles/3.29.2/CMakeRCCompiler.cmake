@@ -1,4 +1,4 @@
-set(CMAKE_RC_COMPILER "C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/bin/windres.exe")
+set(CMAKE_RC_COMPILER "C:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/bin/windres.exe")
 set(CMAKE_RC_COMPILER_ARG1 "")
 set(CMAKE_RC_COMPILER_LOADED 1)
 set(CMAKE_RC_SOURCE_FILE_EXTENSIONS rc;RC)
