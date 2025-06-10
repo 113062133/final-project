@@ -42,8 +42,6 @@ void PlayScene::Initialize() {
     AddNewControlObject(UIGroup = new Group());
     ReadMap();
 
-    player = new Player("play/player.png", 400, 500);
-    AddNewObject(player);
     // Start BGM.
     bgmId = AudioHelper::PlayBGM("play.ogg");
 }
@@ -136,7 +134,9 @@ void PlayScene::ReadMap() {
                     break;
                 case 2: 
                     mapState[i][j] = TILE_PLAYER; 
-                    TileMapGroup->AddNewObject(new Engine::Image("play/player.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    player = new Player("play/player.png", (j+1) * BlockSize , i * BlockSize, BlockSize, BlockSize);
+                    AddNewObject(player);
                     break;
                 case 3: 
                     mapState[i][j] = TILE_DOOR; 
