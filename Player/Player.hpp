@@ -8,12 +8,12 @@ class PlayScene;
 
 class Player : public Engine::Sprite {
 public:
-    Player(std::string img, float x, float y);
+    Player(std::string img, float x, float y, float w, float h);
     void Update(float deltaTime);
     void Draw() const;
     void Move(int dx, int dy);
 private:
-    float x, y;
+    float x, y, w, h;
     float velocityY;
     bool onGround;
     const float gravity = 1000.0f;

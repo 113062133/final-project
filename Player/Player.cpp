@@ -9,7 +9,7 @@ PlayScene *Player::getPlayScene() {
     return dynamic_cast<PlayScene *>(Engine::GameEngine::GetInstance().GetActiveScene());
 }
 
-Player::Player(std::string img, float x, float y) : Engine::Sprite(img, x, y), x(x), y(y), 
+Player::Player(std::string img, float x, float y, float w, float h) : Engine::Sprite(img, x, y, w, h), x(x), y(y), w(w), h(h), 
                                                     velocityY(0), onGround(true), playScene(getPlayScene()) {}
 void Player::Update(float deltaTime) {
     velocityY += gravity * deltaTime;
