@@ -61,4 +61,8 @@ public:
     void ConstructUI();
     void UIBtnClicked(int id);
 };
+
+struct Floor {
+    float x, y, w, h;
+};
 #endif   // PLAYSCENE_HPP

@@ -23,6 +23,7 @@
 #include "allegro5/keycodes.h"
 #include "Door/Door.hpp"
 #include "Player/Player.hpp"
+#include "allegro5/allegro_primitives.h"
 
 bool PlayScene::DebugMode = false;
 const std::vector<Engine::Point> PlayScene::directions = { Engine::Point(-1, 0), Engine::Point(0, -1), Engine::Point(1, 0), Engine::Point(0, 1) };
@@ -35,7 +36,10 @@ Engine::Point PlayScene::GetClientSize() {
     return Engine::Point(MapWidth * BlockSize, MapHeight * BlockSize);
 }
 void PlayScene::Initialize() {
+    int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
+    int h = Engine::GameEngine::GetInstance().GetScreenSize().y;
     mapState.clear();
+    AddNewObject(new Engine::Image("play/background_image.png",0,0,w,h));
     // Add groups from bottom to top.
     AddNewObject(TileMapGroup = new Group());
     AddNewObject(GroundEffectGroup = new Group());
@@ -43,8 +47,8 @@ void PlayScene::Initialize() {
     AddNewObject(EffectGroup = new Group());
     // Should support buttons.
     AddNewControlObject(UIGroup = new Group());
-    ReadMap();
 
+    ReadMap();
     // Start BGM.
     bgmId = AudioHelper::PlayBGM("play.ogg");
 }
@@ -106,29 +110,30 @@ void PlayScene::OnKeyUp(int keyCode) {
 void PlayScene::ReadMap() {
     std::string filename = std::string("Resource/level") + std::to_string(MapId) + ".txt";
     // Read map file.
-    char c;
-    std::vector<int> mapData;
+    
+    std::vector<Floor> floors;
     std::ifstream fin(filename);
-    while (fin >> c) {
-        switch (c) {
-            case '0': mapData.push_back(0); break;
-            case '1': mapData.push_back(1); break;
-            case '2': mapData.push_back(2); break; //player initial position
-            case '3': mapData.push_back(3); break; //door position
-            case '\n':
-            case '\r':
-                if (static_cast<int>(mapData.size()) / MapWidth != 0)
-                    throw std::ios_base::failure("Map data is corrupted.");
-                break;
-            default: throw std::ios_base::failure("Map data is corrupted.");
+    std::string type;
+    float x, y, w, h;
+    while (fin >> type >> x >> y >> w >> h) {
+        if (type == "F") {
+            floors.push_back({x, y, w, h});
+            TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", x, y, w, h));
+        } else if (type == "P") {
+            player = new Player("play/player.png", x, y, w, h);
+            AddNewObject(player);
+        } else if (type == "D") {
+            TileMapGroup->AddNewObject(new Engine::Image("play/door.png", x, y, w, h));
+        } else {
+            Engine::LOG(Engine::ERROR) << "Unknown object type: " << type;
         }
     }
     fin.close();
     // Validate map data.
-    if (static_cast<int>(mapData.size()) != MapWidth * MapHeight)
-        throw std::ios_base::failure("Map data is corrupted.");
+    /*if (static_cast<int>(mapData.size()) != MapWidth * MapHeight)
+        throw std::ios_base::failure("Map data is corrupted.");*/
     // Store map in 2d array.
-    mapState = std::vector<std::vector<TileType>>(MapHeight, std::vector<TileType>(MapWidth));
+    /*mapState = std::vector<std::vector<TileType>>(MapHeight, std::vector<TileType>(MapWidth));
     for (int i = 0; i < MapHeight; i++) {
         for (int j = 0; j < MapWidth; j++) {
             const int num = mapData[i * MapWidth + j];
@@ -155,7 +160,8 @@ void PlayScene::ReadMap() {
                     break;
             }
         }
-    }
+    }*/
+
 }
 
 void PlayScene::ConstructUI() {
