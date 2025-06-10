@@ -39,7 +39,6 @@ void PlayScene::Initialize() {
     // Should support buttons.
     AddNewControlObject(UIGroup = new Group());
     ReadMap();
-    ReadEnemyWave();
     // Start BGM.
     bgmId = AudioHelper::PlayBGM("play.ogg");
 }
@@ -116,18 +115,7 @@ void PlayScene::ReadMap() {
         }
     }
 }
-void PlayScene::ReadEnemyWave() {
-    std::string filename = std::string("Resource/enemy") + std::to_string(MapId) + ".txt";
-    // Read enemy file.
-    float type, wait, repeat;
-    enemyWaveData.clear();
-    std::ifstream fin(filename);
-    while (fin >> type && fin >> wait && fin >> repeat) {
-        for (int i = 0; i < repeat; i++)
-            enemyWaveData.emplace_back(type, wait);
-    }
-    fin.close();
-}
+
 void PlayScene::ConstructUI() {
     // Background
     UIGroup->AddNewObject(new Engine::Image("play/sand.png", 1280, 0, 320, 832));
