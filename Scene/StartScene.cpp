@@ -100,7 +100,7 @@ void StartScene::Initialize() {
     btn->SetOnClickCallback(std::bind(&StartScene::PlayOnClick, this, 15));
     AddNewControlObject(btn);
     
-    //boss level button
+    //level 16 button
     btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/yellow.png", halfW + 600, halfH / 2 + 170, 110, 110);
     btn->SetOnClickCallback(std::bind(&StartScene::PlayOnClick, this, 16));
     AddNewControlObject(btn);
@@ -115,7 +115,10 @@ void StartScene::Terminate() {
     IScene::Terminate();
 }
 void StartScene::PlayOnClick(int stage) {
+    PlayScene *scene = dynamic_cast<PlayScene *>(Engine::GameEngine::GetInstance().GetScene("play"));
+    scene->MapId = stage;
     Engine::GameEngine::GetInstance().ChangeScene("play");
+    
 }
 void StartScene::SettingsOnClick(int stage) {
     Engine::GameEngine::GetInstance().ChangeScene("settings");
