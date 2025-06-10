@@ -9134,7 +9134,7 @@ CMakeFiles/LevelDevil.dir/Player/Player.cpp.obj: C:/github/final-project/Player/
   C:/github/final-project/Engine/Point.hpp \
   C:/github/final-project/Engine/Sprite.hpp \
   C:/github/final-project/Player/Player.hpp \
-  C:/github/final-project/Scene/Playscene.hpp \
+  C:/github/final-project/Scene/PlayScene.hpp \
   C:/github/final-project/UI/Component/Image.hpp \
   C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/_mingw.h \
   C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/_mingw_mac.h \
@@ -10000,11 +10000,12 @@ CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.obj: C:/github/final-project/Scene
   C:/github/final-project/Engine/Resources.hpp \
   C:/github/final-project/Engine/Sprite.hpp \
   C:/github/final-project/Player/Player.hpp \
-  C:/github/final-project/Scene/Playscene.hpp \
+  C:/github/final-project/Scene/PlayScene.hpp \
   C:/github/final-project/Scene/WinScene.hpp \
   C:/github/final-project/UI/Component/Image.hpp \
   C:/github/final-project/UI/Component/ImageButton.hpp \
   C:/github/final-project/UI/Component/Label.hpp \
+  C:/github/final-project/Scene/PlayScene.cpp \
   C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/_mingw.h \
   C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/_mingw_mac.h \
   C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/_mingw_off_t.h \
@@ -10921,7 +10922,7 @@ CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.obj: C:/github/final-project/S
   C:/github/final-project/UI/Component/ImageButton.hpp \
   C:/github/final-project/UI/Component/Label.hpp \
   C:/github/final-project/UI/Component/Slider.hpp \
-  C:/github/final-project/Scene/Playscene.hpp \
+  C:/github/final-project/Scene/PlayScene.hpp \
   C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/_mingw.h \
   C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/_mingw_mac.h \
   C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/_mingw_off_t.h \
@@ -11789,7 +11790,7 @@ CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.obj: C:/github/final-project/Scen
   C:/github/final-project/UI/Component/Image.hpp \
   C:/github/final-project/UI/Component/ImageButton.hpp \
   C:/github/final-project/UI/Component/Label.hpp \
-  C:/github/final-project/Scene/Playscene.hpp \
+  C:/github/final-project/Scene/PlayScene.hpp \
   C:/github/final-project/Scene/StartScene.h \
   C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/_mingw.h \
   C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/_mingw_mac.h \
@@ -12657,7 +12658,7 @@ CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.obj: C:/github/final-project/Scene/
   C:/github/final-project/UI/Component/Image.hpp \
   C:/github/final-project/UI/Component/ImageButton.hpp \
   C:/github/final-project/UI/Component/Label.hpp \
-  C:/github/final-project/Scene/Playscene.hpp \
+  C:/github/final-project/Scene/PlayScene.hpp \
   C:/github/final-project/Scene/WinScene.hpp \
   C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/_mingw.h \
   C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/_mingw_mac.h \
@@ -16964,7 +16965,7 @@ CMakeFiles/LevelDevil.dir/main.cpp.obj: C:/github/final-project/main.cpp \
   C:/github/final-project/Engine/GameEngine.hpp \
   C:/github/final-project/Engine/LOG.hpp \
   C:/github/final-project/Engine/Point.hpp \
-  C:/github/final-project/Scene/Playscene.hpp \
+  C:/github/final-project/Scene/PlayScene.hpp \
   C:/github/final-project/Scene/SettingsScene.hpp \
   C:/github/final-project/Scene/StartScene.h \
   C:/github/final-project/Scene/WinScene.hpp \
@@ -19313,8 +19314,6 @@ C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-m
 
 C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__type_traits/remove_const.h:
 
-C:/github/final-project/Scene/Playscene.hpp:
-
 C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__type_traits/remove_extent.h:
 
 C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__type_traits/remove_pointer.h:
@@ -19637,6 +19636,8 @@ C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-m
 
 C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__mutex/tag_types.h:
 
+C:/github/final-project/Scene/PlayScene.cpp:
+
 C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__split_buffer:
 
 C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__support/win32/locale_win32.h:
@@ -19712,6 +19713,8 @@ C:/github/final-project/Engine/Point.cpp:
 C:/github/final-project/UI/Component/Image.hpp:
 
 C:/github/final-project/Player/Player.hpp:
+
+C:/github/final-project/Scene/PlayScene.hpp:
 
 C:/github/final-project/Scene/Playscene.cpp:
 

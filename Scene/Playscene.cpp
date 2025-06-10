@@ -141,7 +141,7 @@ void PlayScene::ReadMap() {
                 case 2: 
                     mapState[i][j] = TILE_PLAYER; 
                     TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
-                    player = new Player("play/player.png", (j + 1) * BlockSize, (i + 1) * BlockSize, BlockSize, BlockSize);
+                    player = new Player("play/player.png",j * BlockSize, (i - 1) * BlockSize, BlockSize / 2, BlockSize);
                     AddNewObject(player);
                     break;
                 case 3: 
@@ -149,9 +149,6 @@ void PlayScene::ReadMap() {
                     TileMapGroup->AddNewObject(new Engine::Image("play/door.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
                     break;
             }
-            
-
-            
         }
     }
 }
