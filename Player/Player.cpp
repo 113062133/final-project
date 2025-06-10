@@ -36,8 +36,8 @@ void Player::Update(float deltaTime) {
         onGround = false;
     }
 
-    Position.x = x;
-    Position.y = y;
+    //Position.x = x;
+    //Position.y = y;
 }
 void Player::Draw() const {
     Sprite::Draw();

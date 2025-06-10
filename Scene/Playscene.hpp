@@ -9,6 +9,7 @@
 #include "Player/Player.hpp"
 #include "Engine/IScene.hpp"
 #include "Engine/Point.hpp"
+#include "Door/Door.hpp"
 
 class PlayScene final : public Engine::IScene {
 private:
@@ -39,6 +40,7 @@ public:
     Group *EffectGroup;
     Group *UIGroup;
     Player *player;
+    Door *door;
     std::vector<std::vector<TileType>> mapState;
     std::vector<std::vector<int>> mapDistance;
     std::list<std::pair<int, float>> enemyWaveData;
