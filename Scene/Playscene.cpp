@@ -7,6 +7,7 @@
 #include <queue>
 #include <string>
 #include <vector>
+#include <iostream>
 
 #include "Engine/AudioHelper.hpp"
 #include "Engine/GameEngine.hpp"
@@ -14,10 +15,11 @@
 #include "Engine/LOG.hpp"
 #include "Engine/Point.hpp"
 #include "Engine/Resources.hpp"
-#include "PlayScene.hpp"
+#include "Scene/PlayScene.hpp"
 #include "Scene/WinScene.hpp"
 #include "UI/Component/ImageButton.hpp"
 #include "UI/Component/Label.hpp"
+#include "allegro5/keycodes.h"
 
 bool PlayScene::DebugMode = false;
 const std::vector<Engine::Point> PlayScene::directions = { Engine::Point(-1, 0), Engine::Point(0, -1), Engine::Point(1, 0), Engine::Point(0, 1) };
@@ -39,6 +41,9 @@ void PlayScene::Initialize() {
     // Should support buttons.
     AddNewControlObject(UIGroup = new Group());
     ReadMap();
+
+    player = new Player("play/player.png", 400, 500);
+    AddNewObject(player);
     // Start BGM.
     bgmId = AudioHelper::PlayBGM("play.ogg");
 }
@@ -78,7 +83,18 @@ void PlayScene::OnMouseUp(int button, int mx, int my) {
 }
 void PlayScene::OnKeyDown(int keyCode) {
     IScene::OnKeyDown(keyCode);
-    
+    if (keyCode == ALLEGRO_KEY_W || keyCode == ALLEGRO_KEY_UP) {
+        player->Move(0, -1);
+        std::cout << "yes" << std::endl;
+    }
+    if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
+        player->Move(-1, 0);
+        std::cout << "yes" << std::endl;
+    }
+    if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
+        player->Move(1, 0);
+        std::cout << "yes" << std::endl;
+    }
 }
 void PlayScene::ReadMap() {
     std::string filename = std::string("Resource/level") + std::to_string(MapId) + ".txt";

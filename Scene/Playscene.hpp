@@ -6,6 +6,7 @@
 #include <utility>
 #include <vector>
 
+#include "Player/Player.hpp"
 #include "Engine/IScene.hpp"
 #include "Engine/Point.hpp"
 
@@ -35,6 +36,7 @@ public:
     Group *DebugIndicatorGroup;
     Group *EffectGroup;
     Group *UIGroup;
+    Player *player;
     std::vector<std::vector<TileType>> mapState;
     std::vector<std::vector<int>> mapDistance;
     std::list<std::pair<int, float>> enemyWaveData;

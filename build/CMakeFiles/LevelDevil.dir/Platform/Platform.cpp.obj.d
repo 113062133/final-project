@@ -1,2 +1,2 @@
 CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.obj: \
-  D:/final-project/Platform/Platform.cpp
+  C:/github/final-project/Platform/Platform.cpp

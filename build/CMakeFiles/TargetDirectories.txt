@@ -1,3 +1,3 @@
-D:/final-project/build/CMakeFiles/LevelDevil.dir
-D:/final-project/build/CMakeFiles/edit_cache.dir
-D:/final-project/build/CMakeFiles/rebuild_cache.dir
+C:/github/final-project/build/CMakeFiles/LevelDevil.dir
+C:/github/final-project/build/CMakeFiles/edit_cache.dir
+C:/github/final-project/build/CMakeFiles/rebuild_cache.dir

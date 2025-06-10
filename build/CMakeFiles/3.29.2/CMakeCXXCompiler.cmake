@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "c:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/bin/clang++.exe")
+set(CMAKE_CXX_COMPILER "c:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/bin/clang++.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "Clang")
 set(CMAKE_CXX_COMPILER_VERSION "18.1.4")
@@ -22,14 +22,14 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "C:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/bin/llvm-ar.exe")
-set(CMAKE_CXX_COMPILER_AR "C:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/bin/llvm-ar.exe")
-set(CMAKE_RANLIB "C:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/bin/llvm-ranlib.exe")
-set(CMAKE_CXX_COMPILER_RANLIB "C:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/bin/llvm-ranlib.exe")
-set(CMAKE_LINKER "C:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/bin/ld.lld.exe")
+set(CMAKE_AR "C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/bin/llvm-ar.exe")
+set(CMAKE_CXX_COMPILER_AR "C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/bin/llvm-ar.exe")
+set(CMAKE_RANLIB "C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/bin/llvm-ranlib.exe")
+set(CMAKE_CXX_COMPILER_RANLIB "C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/bin/llvm-ranlib.exe")
+set(CMAKE_LINKER "C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/bin/ld.lld.exe")
 set(CMAKE_LINKER_LINK "")
 set(CMAKE_LINKER_LLD "")
-set(CMAKE_CXX_COMPILER_LINKER "c:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/bin/ld.lld")
+set(CMAKE_CXX_COMPILER_LINKER "c:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/bin/ld.lld")
 set(CMAKE_CXX_COMPILER_LINKER_ID "LLD")
 set(CMAKE_CXX_COMPILER_LINKER_VERSION 18.1.4)
 set(CMAKE_CXX_COMPILER_LINKER_FRONTEND_VARIANT GNU)
@@ -85,8 +85,8 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1;C:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/lib/clang/18/include;C:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1;C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/lib/clang/18/include;C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "c++;mingw32;unwind;moldname;mingwex;advapi32;shell32;user32;kernel32;mingw32;unwind;moldname;mingwex;kernel32")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "C:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/x86_64-w64-mingw32/lib;C:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/x86_64-w64-mingw32/mingw/lib;C:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/lib;C:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/lib/clang/18/lib/windows")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/x86_64-w64-mingw32/lib;C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/x86_64-w64-mingw32/mingw/lib;C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/lib;C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/lib/clang/18/lib/windows")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
-set(CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR "C:/Users/pengc/Downloads/llvm-mingw-20240417-msvcrt-x86_64/lib/clang/18")
+set(CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR "C:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/lib/clang/18")
