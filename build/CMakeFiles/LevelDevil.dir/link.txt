@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\LevelDevil.dir/objects.a
+C:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\llvm-ar.exe qc CMakeFiles\LevelDevil.dir/objects.a @CMakeFiles\LevelDevil.dir\objects1.rsp
+c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe -g -Wl,--whole-archive CMakeFiles\LevelDevil.dir/objects.a -Wl,--no-whole-archive -o LevelDevil.exe -Wl,--out-implib,libLevelDevil.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\LevelDevil.dir\linkLibs.rsp

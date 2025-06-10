@@ -21,7 +21,9 @@ void StartScene::Initialize() {
     int halfH = h / 2;
     Engine::ImageButton *btn;
 
+    
     AddNewObject(new Engine::Image("stage-select/background1.png", 0, 0, w, h));
+    AddNewObject(new Engine::Label("IQ   test", "pirulen.ttf", 120, halfW, 120, 209, 150, 102, 255, 0.5, 0.5));
 
     //level 1 button
     btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/yellow.png", 30, halfH - 30, 70, 70);
