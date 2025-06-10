@@ -7,7 +7,7 @@
 #include "Engine/GameEngine.hpp"
 #include "Engine/Point.hpp"
 #include "Engine/Resources.hpp"
-#include "PlayScene.hpp"
+#include "Playscene.hpp"
 #include "Scene/SettingsScene.hpp"
 #include "UI/Component/ImageButton.hpp"
 #include "UI/Component/Label.hpp"

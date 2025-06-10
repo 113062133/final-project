@@ -1,6 +1,6 @@
 #include "Door.hpp"
 #include "Engine/Sprite.hpp"
-#include "Scene/PlayScene.hpp"
+#include "Scene/Playscene.hpp"
 #include "Engine/GameEngine.hpp"
 #include "Engine/Group.hpp"
 #include "Engine/IScene.hpp"

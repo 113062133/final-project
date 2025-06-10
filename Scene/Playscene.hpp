@@ -18,7 +18,6 @@ class PlayScene final : public Engine::IScene {
 private:
     ALLEGRO_SAMPLE_ID bgmId;
     std::shared_ptr<ALLEGRO_SAMPLE_INSTANCE> deathBGMInstance;
-    //std::vector<Floor> floors;
 
 public:
     enum TileType {
@@ -28,6 +27,14 @@ public:
         TILE_PLAYER,
         TILE_DOOR
     };
+
+    enum class ObjectType { FLOOR, DOOR, SPIKE };
+    struct Object {
+        float x, y, w, h;
+        ObjectType type;
+    };
+    std::vector<Object> objects; // 取代 floors
+
     static bool DebugMode;
     static const std::vector<Engine::Point> directions;
     static const int MapWidth, MapHeight;
@@ -43,8 +50,7 @@ public:
     Group *DebugIndicatorGroup;
     Group *EffectGroup;
     Group *UIGroup;
-    std::vector<Floor> floors;
-    Player* player;
+    
     Door *door;
     std::vector<std::vector<TileType>> mapState;
     std::vector<std::vector<int>> mapDistance;

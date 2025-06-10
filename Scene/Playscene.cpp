@@ -25,6 +25,7 @@
 #include "Player/Player.hpp"
 #include "allegro5/allegro_primitives.h"
 
+Player* player;
 bool PlayScene::DebugMode = false;
 const std::vector<Engine::Point> PlayScene::directions = { Engine::Point(-1, 0), Engine::Point(0, -1), Engine::Point(1, 0), Engine::Point(0, 1) };
 const int PlayScene::MapWidth = 25, PlayScene::MapHeight = 13;
@@ -108,6 +109,8 @@ void PlayScene::OnKeyUp(int keyCode) {
         player->isMovingRight = false;
     }
 }
+
+
 void PlayScene::ReadMap() {
     std::string filename = std::string("Resource/level") + std::to_string(MapId) + ".txt";
     // Read map file.
@@ -117,12 +120,13 @@ void PlayScene::ReadMap() {
     float x, y, w, h;
     while (fin >> type >> x >> y >> w >> h) {
         if (type == "F") {
-            floors.push_back({x, y, w, h});
+            objects.push_back({x, y, w, h, ObjectType::FLOOR});
             TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", x, y, w, h));
         } else if (type == "P") {
-            player = new Player("play/player.png", x, y, w, h);
+            player = new Player("play/player.png", x, y, w/2, h);
             AddNewObject(player);
         } else if (type == "D") {
+            objects.push_back({x, y, w, h, ObjectType::DOOR});
             TileMapGroup->AddNewObject(new Engine::Image("play/door.png", x, y, w, h));
         } else {
             Engine::LOG(Engine::ERROR) << "Unknown object type: " << type;

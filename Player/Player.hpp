@@ -20,11 +20,10 @@ public:
                  float bx, float by, float bw, float bh);
 private:
     float x, y, w, h;
-    std::vector<Floor>* floors;
     float velocityY;
-    const float moveSpeed = 200.0f;
-    const float gravity = 1500.0f;
-    const float jumpSpeed = -600.0f;
+    const float moveSpeed = 300.0f;
+    const float gravity = 1600.0f;
+    const float jumpSpeed = -700.0f;
     
     PlayScene *playScene;
     PlayScene *getPlayScene();
