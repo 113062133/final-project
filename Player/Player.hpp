@@ -9,14 +9,16 @@ class PlayScene;
 class Player : public Engine::Sprite {
 public:
     Player(std::string img, float x, float y, float w, float h);
+    bool isMovingLeft, isMovingRight;
+    bool onGround;
     void Update(float deltaTime);
     void Draw() const;
-    void Move(int dx, int dy);
+    void Jump();
 private:
     float x, y, w, h;
     float velocityY;
-    bool onGround;
-    const float gravity = 1000.0f;
+    const float moveSpeed = 200.0f;
+    const float gravity = 1500.0f;
     const float jumpSpeed = -600.0f;
     
     PlayScene *playScene;

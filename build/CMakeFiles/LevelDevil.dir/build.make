@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\pengc\OneDrive\Documents\final-project
+CMAKE_SOURCE_DIR = C:\github\final-project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\pengc\OneDrive\Documents\final-project\build
+CMAKE_BINARY_DIR = C:\github\final-project\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LevelDevil.dir/depend.make
@@ -70,363 +70,363 @@ include CMakeFiles/LevelDevil.dir/flags.make
 
 CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Engine/Allegro5Exception.cpp
+CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.obj: C:/github/final-project/Engine/Allegro5Exception.cpp
 CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\Allegro5Exception.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\Allegro5Exception.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Engine\Allegro5Exception.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\Allegro5Exception.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\Allegro5Exception.cpp.obj -c C:\github\final-project\Engine\Allegro5Exception.cpp
 
 CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Engine\Allegro5Exception.cpp > CMakeFiles\LevelDevil.dir\Engine\Allegro5Exception.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Engine\Allegro5Exception.cpp > CMakeFiles\LevelDevil.dir\Engine\Allegro5Exception.cpp.i
 
 CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Engine\Allegro5Exception.cpp -o CMakeFiles\LevelDevil.dir\Engine\Allegro5Exception.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Engine\Allegro5Exception.cpp -o CMakeFiles\LevelDevil.dir\Engine\Allegro5Exception.cpp.s
 
 CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Engine/AudioHelper.cpp
+CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.obj: C:/github/final-project/Engine/AudioHelper.cpp
 CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\AudioHelper.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\AudioHelper.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Engine\AudioHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\AudioHelper.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\AudioHelper.cpp.obj -c C:\github\final-project\Engine\AudioHelper.cpp
 
 CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Engine\AudioHelper.cpp > CMakeFiles\LevelDevil.dir\Engine\AudioHelper.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Engine\AudioHelper.cpp > CMakeFiles\LevelDevil.dir\Engine\AudioHelper.cpp.i
 
 CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Engine\AudioHelper.cpp -o CMakeFiles\LevelDevil.dir\Engine\AudioHelper.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Engine\AudioHelper.cpp -o CMakeFiles\LevelDevil.dir\Engine\AudioHelper.cpp.s
 
 CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Engine/Collider.cpp
+CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.obj: C:/github/final-project/Engine/Collider.cpp
 CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\Collider.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\Collider.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Engine\Collider.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\Collider.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\Collider.cpp.obj -c C:\github\final-project\Engine\Collider.cpp
 
 CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Engine\Collider.cpp > CMakeFiles\LevelDevil.dir\Engine\Collider.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Engine\Collider.cpp > CMakeFiles\LevelDevil.dir\Engine\Collider.cpp.i
 
 CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Engine\Collider.cpp -o CMakeFiles\LevelDevil.dir\Engine\Collider.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Engine\Collider.cpp -o CMakeFiles\LevelDevil.dir\Engine\Collider.cpp.s
 
 CMakeFiles/LevelDevil.dir/Engine/GameEngine.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Engine/GameEngine.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Engine/GameEngine.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Engine/GameEngine.cpp
+CMakeFiles/LevelDevil.dir/Engine/GameEngine.cpp.obj: C:/github/final-project/Engine/GameEngine.cpp
 CMakeFiles/LevelDevil.dir/Engine/GameEngine.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/GameEngine.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/GameEngine.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\GameEngine.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\GameEngine.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Engine\GameEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/GameEngine.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/GameEngine.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\GameEngine.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\GameEngine.cpp.obj -c C:\github\final-project\Engine\GameEngine.cpp
 
 CMakeFiles/LevelDevil.dir/Engine/GameEngine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Engine/GameEngine.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Engine\GameEngine.cpp > CMakeFiles\LevelDevil.dir\Engine\GameEngine.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Engine\GameEngine.cpp > CMakeFiles\LevelDevil.dir\Engine\GameEngine.cpp.i
 
 CMakeFiles/LevelDevil.dir/Engine/GameEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Engine/GameEngine.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Engine\GameEngine.cpp -o CMakeFiles\LevelDevil.dir\Engine\GameEngine.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Engine\GameEngine.cpp -o CMakeFiles\LevelDevil.dir\Engine\GameEngine.cpp.s
 
 CMakeFiles/LevelDevil.dir/Engine/Group.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Engine/Group.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Engine/Group.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Engine/Group.cpp
+CMakeFiles/LevelDevil.dir/Engine/Group.cpp.obj: C:/github/final-project/Engine/Group.cpp
 CMakeFiles/LevelDevil.dir/Engine/Group.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/Group.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/Group.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\Group.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\Group.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Engine\Group.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/Group.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/Group.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\Group.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\Group.cpp.obj -c C:\github\final-project\Engine\Group.cpp
 
 CMakeFiles/LevelDevil.dir/Engine/Group.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Engine/Group.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Engine\Group.cpp > CMakeFiles\LevelDevil.dir\Engine\Group.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Engine\Group.cpp > CMakeFiles\LevelDevil.dir\Engine\Group.cpp.i
 
 CMakeFiles/LevelDevil.dir/Engine/Group.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Engine/Group.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Engine\Group.cpp -o CMakeFiles\LevelDevil.dir\Engine\Group.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Engine\Group.cpp -o CMakeFiles\LevelDevil.dir\Engine\Group.cpp.s
 
 CMakeFiles/LevelDevil.dir/Engine/IControl.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Engine/IControl.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Engine/IControl.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Engine/IControl.cpp
+CMakeFiles/LevelDevil.dir/Engine/IControl.cpp.obj: C:/github/final-project/Engine/IControl.cpp
 CMakeFiles/LevelDevil.dir/Engine/IControl.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/IControl.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/IControl.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\IControl.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\IControl.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Engine\IControl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/IControl.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/IControl.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\IControl.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\IControl.cpp.obj -c C:\github\final-project\Engine\IControl.cpp
 
 CMakeFiles/LevelDevil.dir/Engine/IControl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Engine/IControl.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Engine\IControl.cpp > CMakeFiles\LevelDevil.dir\Engine\IControl.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Engine\IControl.cpp > CMakeFiles\LevelDevil.dir\Engine\IControl.cpp.i
 
 CMakeFiles/LevelDevil.dir/Engine/IControl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Engine/IControl.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Engine\IControl.cpp -o CMakeFiles\LevelDevil.dir\Engine\IControl.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Engine\IControl.cpp -o CMakeFiles\LevelDevil.dir\Engine\IControl.cpp.s
 
 CMakeFiles/LevelDevil.dir/Engine/IObject.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Engine/IObject.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Engine/IObject.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Engine/IObject.cpp
+CMakeFiles/LevelDevil.dir/Engine/IObject.cpp.obj: C:/github/final-project/Engine/IObject.cpp
 CMakeFiles/LevelDevil.dir/Engine/IObject.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/IObject.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/IObject.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\IObject.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\IObject.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Engine\IObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/IObject.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/IObject.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\IObject.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\IObject.cpp.obj -c C:\github\final-project\Engine\IObject.cpp
 
 CMakeFiles/LevelDevil.dir/Engine/IObject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Engine/IObject.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Engine\IObject.cpp > CMakeFiles\LevelDevil.dir\Engine\IObject.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Engine\IObject.cpp > CMakeFiles\LevelDevil.dir\Engine\IObject.cpp.i
 
 CMakeFiles/LevelDevil.dir/Engine/IObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Engine/IObject.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Engine\IObject.cpp -o CMakeFiles\LevelDevil.dir\Engine\IObject.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Engine\IObject.cpp -o CMakeFiles\LevelDevil.dir\Engine\IObject.cpp.s
 
 CMakeFiles/LevelDevil.dir/Engine/IScene.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Engine/IScene.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Engine/IScene.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Engine/IScene.cpp
+CMakeFiles/LevelDevil.dir/Engine/IScene.cpp.obj: C:/github/final-project/Engine/IScene.cpp
 CMakeFiles/LevelDevil.dir/Engine/IScene.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/IScene.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/IScene.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\IScene.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\IScene.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Engine\IScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/IScene.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/IScene.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\IScene.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\IScene.cpp.obj -c C:\github\final-project\Engine\IScene.cpp
 
 CMakeFiles/LevelDevil.dir/Engine/IScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Engine/IScene.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Engine\IScene.cpp > CMakeFiles\LevelDevil.dir\Engine\IScene.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Engine\IScene.cpp > CMakeFiles\LevelDevil.dir\Engine\IScene.cpp.i
 
 CMakeFiles/LevelDevil.dir/Engine/IScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Engine/IScene.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Engine\IScene.cpp -o CMakeFiles\LevelDevil.dir\Engine\IScene.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Engine\IScene.cpp -o CMakeFiles\LevelDevil.dir\Engine\IScene.cpp.s
 
 CMakeFiles/LevelDevil.dir/Engine/LOG.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Engine/LOG.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Engine/LOG.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Engine/LOG.cpp
+CMakeFiles/LevelDevil.dir/Engine/LOG.cpp.obj: C:/github/final-project/Engine/LOG.cpp
 CMakeFiles/LevelDevil.dir/Engine/LOG.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/LOG.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/LOG.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\LOG.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\LOG.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Engine\LOG.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/LOG.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/LOG.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\LOG.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\LOG.cpp.obj -c C:\github\final-project\Engine\LOG.cpp
 
 CMakeFiles/LevelDevil.dir/Engine/LOG.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Engine/LOG.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Engine\LOG.cpp > CMakeFiles\LevelDevil.dir\Engine\LOG.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Engine\LOG.cpp > CMakeFiles\LevelDevil.dir\Engine\LOG.cpp.i
 
 CMakeFiles/LevelDevil.dir/Engine/LOG.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Engine/LOG.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Engine\LOG.cpp -o CMakeFiles\LevelDevil.dir\Engine\LOG.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Engine\LOG.cpp -o CMakeFiles\LevelDevil.dir\Engine\LOG.cpp.s
 
 CMakeFiles/LevelDevil.dir/Engine/Point.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Engine/Point.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Engine/Point.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Engine/Point.cpp
+CMakeFiles/LevelDevil.dir/Engine/Point.cpp.obj: C:/github/final-project/Engine/Point.cpp
 CMakeFiles/LevelDevil.dir/Engine/Point.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/Point.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/Point.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\Point.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\Point.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Engine\Point.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/Point.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/Point.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\Point.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\Point.cpp.obj -c C:\github\final-project\Engine\Point.cpp
 
 CMakeFiles/LevelDevil.dir/Engine/Point.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Engine/Point.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Engine\Point.cpp > CMakeFiles\LevelDevil.dir\Engine\Point.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Engine\Point.cpp > CMakeFiles\LevelDevil.dir\Engine\Point.cpp.i
 
 CMakeFiles/LevelDevil.dir/Engine/Point.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Engine/Point.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Engine\Point.cpp -o CMakeFiles\LevelDevil.dir\Engine\Point.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Engine\Point.cpp -o CMakeFiles\LevelDevil.dir\Engine\Point.cpp.s
 
 CMakeFiles/LevelDevil.dir/Engine/Resources.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Engine/Resources.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Engine/Resources.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Engine/Resources.cpp
+CMakeFiles/LevelDevil.dir/Engine/Resources.cpp.obj: C:/github/final-project/Engine/Resources.cpp
 CMakeFiles/LevelDevil.dir/Engine/Resources.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/Resources.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/Resources.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\Resources.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\Resources.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Engine\Resources.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/Resources.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/Resources.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\Resources.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\Resources.cpp.obj -c C:\github\final-project\Engine\Resources.cpp
 
 CMakeFiles/LevelDevil.dir/Engine/Resources.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Engine/Resources.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Engine\Resources.cpp > CMakeFiles\LevelDevil.dir\Engine\Resources.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Engine\Resources.cpp > CMakeFiles\LevelDevil.dir\Engine\Resources.cpp.i
 
 CMakeFiles/LevelDevil.dir/Engine/Resources.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Engine/Resources.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Engine\Resources.cpp -o CMakeFiles\LevelDevil.dir\Engine\Resources.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Engine\Resources.cpp -o CMakeFiles\LevelDevil.dir\Engine\Resources.cpp.s
 
 CMakeFiles/LevelDevil.dir/Engine/Sprite.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Engine/Sprite.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Engine/Sprite.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Engine/Sprite.cpp
+CMakeFiles/LevelDevil.dir/Engine/Sprite.cpp.obj: C:/github/final-project/Engine/Sprite.cpp
 CMakeFiles/LevelDevil.dir/Engine/Sprite.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/Sprite.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/Sprite.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\Sprite.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\Sprite.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Engine\Sprite.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/LevelDevil.dir/Engine/Sprite.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Engine/Sprite.cpp.obj -MF CMakeFiles\LevelDevil.dir\Engine\Sprite.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Engine\Sprite.cpp.obj -c C:\github\final-project\Engine\Sprite.cpp
 
 CMakeFiles/LevelDevil.dir/Engine/Sprite.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Engine/Sprite.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Engine\Sprite.cpp > CMakeFiles\LevelDevil.dir\Engine\Sprite.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Engine\Sprite.cpp > CMakeFiles\LevelDevil.dir\Engine\Sprite.cpp.i
 
 CMakeFiles/LevelDevil.dir/Engine/Sprite.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Engine/Sprite.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Engine\Sprite.cpp -o CMakeFiles\LevelDevil.dir\Engine\Sprite.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Engine\Sprite.cpp -o CMakeFiles\LevelDevil.dir\Engine\Sprite.cpp.s
 
 CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Platform/Platform.cpp
+CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.obj: C:/github/final-project/Platform/Platform.cpp
 CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.obj -MF CMakeFiles\LevelDevil.dir\Platform\Platform.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Platform\Platform.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Platform\Platform.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.obj -MF CMakeFiles\LevelDevil.dir\Platform\Platform.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Platform\Platform.cpp.obj -c C:\github\final-project\Platform\Platform.cpp
 
 CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Platform\Platform.cpp > CMakeFiles\LevelDevil.dir\Platform\Platform.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Platform\Platform.cpp > CMakeFiles\LevelDevil.dir\Platform\Platform.cpp.i
 
 CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Platform/Platform.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Platform\Platform.cpp -o CMakeFiles\LevelDevil.dir\Platform\Platform.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Platform\Platform.cpp -o CMakeFiles\LevelDevil.dir\Platform\Platform.cpp.s
 
 CMakeFiles/LevelDevil.dir/Player/Player.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Player/Player.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Player/Player.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Player/Player.cpp
+CMakeFiles/LevelDevil.dir/Player/Player.cpp.obj: C:/github/final-project/Player/Player.cpp
 CMakeFiles/LevelDevil.dir/Player/Player.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/LevelDevil.dir/Player/Player.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Player/Player.cpp.obj -MF CMakeFiles\LevelDevil.dir\Player\Player.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Player\Player.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Player\Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/LevelDevil.dir/Player/Player.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Player/Player.cpp.obj -MF CMakeFiles\LevelDevil.dir\Player\Player.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Player\Player.cpp.obj -c C:\github\final-project\Player\Player.cpp
 
 CMakeFiles/LevelDevil.dir/Player/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Player/Player.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Player\Player.cpp > CMakeFiles\LevelDevil.dir\Player\Player.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Player\Player.cpp > CMakeFiles\LevelDevil.dir\Player\Player.cpp.i
 
 CMakeFiles/LevelDevil.dir/Player/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Player/Player.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Player\Player.cpp -o CMakeFiles\LevelDevil.dir\Player\Player.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Player\Player.cpp -o CMakeFiles\LevelDevil.dir\Player\Player.cpp.s
 
 CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Scene/Playscene.cpp
+CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.obj: C:/github/final-project/Scene/Playscene.cpp
 CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.obj -MF CMakeFiles\LevelDevil.dir\Scene\Playscene.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Scene\Playscene.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Scene\Playscene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.obj -MF CMakeFiles\LevelDevil.dir\Scene\Playscene.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Scene\Playscene.cpp.obj -c C:\github\final-project\Scene\Playscene.cpp
 
 CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Scene\Playscene.cpp > CMakeFiles\LevelDevil.dir\Scene\Playscene.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Scene\Playscene.cpp > CMakeFiles\LevelDevil.dir\Scene\Playscene.cpp.i
 
 CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Scene\Playscene.cpp -o CMakeFiles\LevelDevil.dir\Scene\Playscene.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Scene\Playscene.cpp -o CMakeFiles\LevelDevil.dir\Scene\Playscene.cpp.s
 
 CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Scene/SettingsScene.cpp
+CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.obj: C:/github/final-project/Scene/SettingsScene.cpp
 CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.obj -MF CMakeFiles\LevelDevil.dir\Scene\SettingsScene.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Scene\SettingsScene.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Scene\SettingsScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.obj -MF CMakeFiles\LevelDevil.dir\Scene\SettingsScene.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Scene\SettingsScene.cpp.obj -c C:\github\final-project\Scene\SettingsScene.cpp
 
 CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Scene\SettingsScene.cpp > CMakeFiles\LevelDevil.dir\Scene\SettingsScene.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Scene\SettingsScene.cpp > CMakeFiles\LevelDevil.dir\Scene\SettingsScene.cpp.i
 
 CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Scene\SettingsScene.cpp -o CMakeFiles\LevelDevil.dir\Scene\SettingsScene.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Scene\SettingsScene.cpp -o CMakeFiles\LevelDevil.dir\Scene\SettingsScene.cpp.s
 
 CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Scene/StartScene.cpp
+CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.obj: C:/github/final-project/Scene/StartScene.cpp
 CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.obj -MF CMakeFiles\LevelDevil.dir\Scene\StartScene.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Scene\StartScene.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Scene\StartScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.obj -MF CMakeFiles\LevelDevil.dir\Scene\StartScene.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Scene\StartScene.cpp.obj -c C:\github\final-project\Scene\StartScene.cpp
 
 CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Scene\StartScene.cpp > CMakeFiles\LevelDevil.dir\Scene\StartScene.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Scene\StartScene.cpp > CMakeFiles\LevelDevil.dir\Scene\StartScene.cpp.i
 
 CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Scene\StartScene.cpp -o CMakeFiles\LevelDevil.dir\Scene\StartScene.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Scene\StartScene.cpp -o CMakeFiles\LevelDevil.dir\Scene\StartScene.cpp.s
 
 CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Scene/WinScene.cpp
+CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.obj: C:/github/final-project/Scene/WinScene.cpp
 CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.obj -MF CMakeFiles\LevelDevil.dir\Scene\WinScene.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Scene\WinScene.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Scene\WinScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.obj -MF CMakeFiles\LevelDevil.dir\Scene\WinScene.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Scene\WinScene.cpp.obj -c C:\github\final-project\Scene\WinScene.cpp
 
 CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Scene\WinScene.cpp > CMakeFiles\LevelDevil.dir\Scene\WinScene.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Scene\WinScene.cpp > CMakeFiles\LevelDevil.dir\Scene\WinScene.cpp.i
 
 CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Scene\WinScene.cpp -o CMakeFiles\LevelDevil.dir\Scene\WinScene.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Scene\WinScene.cpp -o CMakeFiles\LevelDevil.dir\Scene\WinScene.cpp.s
 
 CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/Trap/Saw.cpp
+CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj: C:/github/final-project/Trap/Saw.cpp
 CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj -MF CMakeFiles\LevelDevil.dir\Trap\Saw.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Trap\Saw.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\Trap\Saw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj -MF CMakeFiles\LevelDevil.dir\Trap\Saw.cpp.obj.d -o CMakeFiles\LevelDevil.dir\Trap\Saw.cpp.obj -c C:\github\final-project\Trap\Saw.cpp
 
 CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\Trap\Saw.cpp > CMakeFiles\LevelDevil.dir\Trap\Saw.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\Trap\Saw.cpp > CMakeFiles\LevelDevil.dir\Trap\Saw.cpp.i
 
 CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\Trap\Saw.cpp -o CMakeFiles\LevelDevil.dir\Trap\Saw.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\Trap\Saw.cpp -o CMakeFiles\LevelDevil.dir\Trap\Saw.cpp.s
 
 CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/UI/Component/Image.cpp
+CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.obj: C:/github/final-project/UI/Component/Image.cpp
 CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.obj -MF CMakeFiles\LevelDevil.dir\UI\Component\Image.cpp.obj.d -o CMakeFiles\LevelDevil.dir\UI\Component\Image.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\UI\Component\Image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.obj -MF CMakeFiles\LevelDevil.dir\UI\Component\Image.cpp.obj.d -o CMakeFiles\LevelDevil.dir\UI\Component\Image.cpp.obj -c C:\github\final-project\UI\Component\Image.cpp
 
 CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\UI\Component\Image.cpp > CMakeFiles\LevelDevil.dir\UI\Component\Image.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\UI\Component\Image.cpp > CMakeFiles\LevelDevil.dir\UI\Component\Image.cpp.i
 
 CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\UI\Component\Image.cpp -o CMakeFiles\LevelDevil.dir\UI\Component\Image.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\UI\Component\Image.cpp -o CMakeFiles\LevelDevil.dir\UI\Component\Image.cpp.s
 
 CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/UI/Component/ImageButton.cpp
+CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.obj: C:/github/final-project/UI/Component/ImageButton.cpp
 CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.obj -MF CMakeFiles\LevelDevil.dir\UI\Component\ImageButton.cpp.obj.d -o CMakeFiles\LevelDevil.dir\UI\Component\ImageButton.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\UI\Component\ImageButton.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.obj -MF CMakeFiles\LevelDevil.dir\UI\Component\ImageButton.cpp.obj.d -o CMakeFiles\LevelDevil.dir\UI\Component\ImageButton.cpp.obj -c C:\github\final-project\UI\Component\ImageButton.cpp
 
 CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\UI\Component\ImageButton.cpp > CMakeFiles\LevelDevil.dir\UI\Component\ImageButton.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\UI\Component\ImageButton.cpp > CMakeFiles\LevelDevil.dir\UI\Component\ImageButton.cpp.i
 
 CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\UI\Component\ImageButton.cpp -o CMakeFiles\LevelDevil.dir\UI\Component\ImageButton.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\UI\Component\ImageButton.cpp -o CMakeFiles\LevelDevil.dir\UI\Component\ImageButton.cpp.s
 
 CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/UI/Component/Label.cpp
+CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.obj: C:/github/final-project/UI/Component/Label.cpp
 CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.obj -MF CMakeFiles\LevelDevil.dir\UI\Component\Label.cpp.obj.d -o CMakeFiles\LevelDevil.dir\UI\Component\Label.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\UI\Component\Label.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.obj -MF CMakeFiles\LevelDevil.dir\UI\Component\Label.cpp.obj.d -o CMakeFiles\LevelDevil.dir\UI\Component\Label.cpp.obj -c C:\github\final-project\UI\Component\Label.cpp
 
 CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\UI\Component\Label.cpp > CMakeFiles\LevelDevil.dir\UI\Component\Label.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\UI\Component\Label.cpp > CMakeFiles\LevelDevil.dir\UI\Component\Label.cpp.i
 
 CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\UI\Component\Label.cpp -o CMakeFiles\LevelDevil.dir\UI\Component\Label.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\UI\Component\Label.cpp -o CMakeFiles\LevelDevil.dir\UI\Component\Label.cpp.s
 
 CMakeFiles/LevelDevil.dir/UI/Component/Slider.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/UI/Component/Slider.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/UI/Component/Slider.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/UI/Component/Slider.cpp
+CMakeFiles/LevelDevil.dir/UI/Component/Slider.cpp.obj: C:/github/final-project/UI/Component/Slider.cpp
 CMakeFiles/LevelDevil.dir/UI/Component/Slider.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/LevelDevil.dir/UI/Component/Slider.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/UI/Component/Slider.cpp.obj -MF CMakeFiles\LevelDevil.dir\UI\Component\Slider.cpp.obj.d -o CMakeFiles\LevelDevil.dir\UI\Component\Slider.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\UI\Component\Slider.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/LevelDevil.dir/UI/Component/Slider.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/UI/Component/Slider.cpp.obj -MF CMakeFiles\LevelDevil.dir\UI\Component\Slider.cpp.obj.d -o CMakeFiles\LevelDevil.dir\UI\Component\Slider.cpp.obj -c C:\github\final-project\UI\Component\Slider.cpp
 
 CMakeFiles/LevelDevil.dir/UI/Component/Slider.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/UI/Component/Slider.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\UI\Component\Slider.cpp > CMakeFiles\LevelDevil.dir\UI\Component\Slider.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\UI\Component\Slider.cpp > CMakeFiles\LevelDevil.dir\UI\Component\Slider.cpp.i
 
 CMakeFiles/LevelDevil.dir/UI/Component/Slider.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/UI/Component/Slider.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\UI\Component\Slider.cpp -o CMakeFiles\LevelDevil.dir\UI\Component\Slider.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\UI\Component\Slider.cpp -o CMakeFiles\LevelDevil.dir\UI\Component\Slider.cpp.s
 
 CMakeFiles/LevelDevil.dir/main.cpp.obj: CMakeFiles/LevelDevil.dir/flags.make
 CMakeFiles/LevelDevil.dir/main.cpp.obj: CMakeFiles/LevelDevil.dir/includes_CXX.rsp
-CMakeFiles/LevelDevil.dir/main.cpp.obj: C:/Users/pengc/OneDrive/Documents/final-project/main.cpp
+CMakeFiles/LevelDevil.dir/main.cpp.obj: C:/github/final-project/main.cpp
 CMakeFiles/LevelDevil.dir/main.cpp.obj: CMakeFiles/LevelDevil.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/LevelDevil.dir/main.cpp.obj"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/main.cpp.obj -MF CMakeFiles\LevelDevil.dir\main.cpp.obj.d -o CMakeFiles\LevelDevil.dir\main.cpp.obj -c C:\Users\pengc\OneDrive\Documents\final-project\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/LevelDevil.dir/main.cpp.obj"
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LevelDevil.dir/main.cpp.obj -MF CMakeFiles\LevelDevil.dir\main.cpp.obj.d -o CMakeFiles\LevelDevil.dir\main.cpp.obj -c C:\github\final-project\main.cpp
 
 CMakeFiles/LevelDevil.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LevelDevil.dir/main.cpp.i"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pengc\OneDrive\Documents\final-project\main.cpp > CMakeFiles\LevelDevil.dir\main.cpp.i
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\github\final-project\main.cpp > CMakeFiles\LevelDevil.dir\main.cpp.i
 
 CMakeFiles/LevelDevil.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LevelDevil.dir/main.cpp.s"
-	c:\Users\pengc\Downloads\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pengc\OneDrive\Documents\final-project\main.cpp -o CMakeFiles\LevelDevil.dir\main.cpp.s
+	c:\Users\csgau\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\github\final-project\main.cpp -o CMakeFiles\LevelDevil.dir\main.cpp.s
 
 # Object files for target LevelDevil
 LevelDevil_OBJECTS = \
@@ -486,7 +486,7 @@ LevelDevil.exe: CMakeFiles/LevelDevil.dir/build.make
 LevelDevil.exe: CMakeFiles/LevelDevil.dir/linkLibs.rsp
 LevelDevil.exe: CMakeFiles/LevelDevil.dir/objects1.rsp
 LevelDevil.exe: CMakeFiles/LevelDevil.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable LevelDevil.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\github\final-project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable LevelDevil.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\LevelDevil.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -498,6 +498,6 @@ CMakeFiles/LevelDevil.dir/clean:
 .PHONY : CMakeFiles/LevelDevil.dir/clean
 
 CMakeFiles/LevelDevil.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\pengc\OneDrive\Documents\final-project C:\Users\pengc\OneDrive\Documents\final-project C:\Users\pengc\OneDrive\Documents\final-project\build C:\Users\pengc\OneDrive\Documents\final-project\build C:\Users\pengc\OneDrive\Documents\final-project\build\CMakeFiles\LevelDevil.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\github\final-project C:\github\final-project C:\github\final-project\build C:\github\final-project\build C:\github\final-project\build\CMakeFiles\LevelDevil.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/LevelDevil.dir/depend
 
