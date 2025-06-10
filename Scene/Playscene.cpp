@@ -15,7 +15,7 @@
 #include "Engine/LOG.hpp"
 #include "Engine/Point.hpp"
 #include "Engine/Resources.hpp"
-#include "Scene/PlayScene.hpp"
+#include "Scene/Playscene.hpp"
 #include "Scene/WinScene.hpp"
 #include "UI/Component/ImageButton.hpp"
 #include "UI/Component/Label.hpp"
@@ -146,7 +146,11 @@ void PlayScene::ReadMap() {
                     break;
                 case 3: 
                     mapState[i][j] = TILE_DOOR; 
+                    TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", (j-3) * BlockSize, (i+1) * BlockSize, BlockSize, BlockSize/4,0.5,1));
                     TileMapGroup->AddNewObject(new Engine::Image("play/door.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    break;
+                case 4://spike
+
                     break;
             }
             
