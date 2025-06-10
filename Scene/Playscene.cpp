@@ -15,7 +15,7 @@
 #include "Engine/LOG.hpp"
 #include "Engine/Point.hpp"
 #include "Engine/Resources.hpp"
-#include "Scene/PlayScene.hpp"
+#include "Scene/Playscene.hpp"
 #include "Scene/WinScene.hpp"
 #include "UI/Component/ImageButton.hpp"
 #include "UI/Component/Label.hpp"
@@ -51,7 +51,7 @@ void PlayScene::Terminate() {
     IScene::Terminate();
 }
 void PlayScene::Update(float deltaTime) {
-
+    player->Update(deltaTime);
 }
 void PlayScene::Draw() const {
     IScene::Draw();
@@ -83,16 +83,22 @@ void PlayScene::OnMouseUp(int button, int mx, int my) {
 void PlayScene::OnKeyDown(int keyCode) {
     IScene::OnKeyDown(keyCode);
     if (keyCode == ALLEGRO_KEY_W || keyCode == ALLEGRO_KEY_UP) {
-        player->Move(0, -1);
-        std::cout << "yes" << std::endl;
+        player->Jump();
     }
     if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
-        player->Move(-1, 0);
-        std::cout << "yes" << std::endl;
+        player->isMovingLeft = true;
     }
     if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
-        player->Move(1, 0);
-        std::cout << "yes" << std::endl;
+        player->isMovingRight = true;
+    }
+}
+void PlayScene::OnKeyUp(int keyCode) {
+    IScene::OnKeyUp(keyCode);
+    if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
+        player->isMovingLeft = false;
+    }
+    if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
+        player->isMovingRight = false;
     }
 }
 void PlayScene::ReadMap() {
@@ -136,19 +142,18 @@ void PlayScene::ReadMap() {
                 case 2: 
                     mapState[i][j] = TILE_PLAYER; 
                     TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
-                    player = new Player("play/player.png", (j+1) * BlockSize , i * BlockSize, BlockSize, BlockSize);
+                    player = new Player("play/player.png",j * BlockSize, (i - 1) * BlockSize, BlockSize / 2, BlockSize);
                     AddNewObject(player);
                     break;
                 case 3: 
                     mapState[i][j] = TILE_DOOR; 
-                    TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
-                    door = new Door("play/door.png", (j+1) * BlockSize , i * BlockSize, BlockSize, BlockSize);
-                    AddNewObject(door);
+                    TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", (j-3) * BlockSize, (i+1) * BlockSize, BlockSize, BlockSize/4,0.5,1));
+                    TileMapGroup->AddNewObject(new Engine::Image("play/door.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    break;
+                case 4://spike
+
                     break;
             }
-            
-
-            
         }
     }
 }

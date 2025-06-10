@@ -58,6 +58,8 @@ add_executable(LevelDevil
 
     Trap/Saw.cpp
     Trap/Saw.hpp
+    Trap/Spike.cpp
+    Trap/Spike.hpp
 
     UI/Component/Image.cpp
     UI/Component/Image.hpp
