@@ -84,12 +84,14 @@ void PlayScene::ReadMap() {
     std::string filename = std::string("Resource/level") + std::to_string(MapId) + ".txt";
     // Read map file.
     char c;
-    std::vector<bool> mapData;
+    std::vector<int> mapData;
     std::ifstream fin(filename);
     while (fin >> c) {
         switch (c) {
-            case '0': mapData.push_back(false); break;
-            case '1': mapData.push_back(true); break;
+            case '0': mapData.push_back(0); break;
+            case '1': mapData.push_back(1); break;
+            case '2': mapData.push_back(2); break; //player initial position
+            case '3': mapData.push_back(3); break; //door position
             case '\n':
             case '\r':
                 if (static_cast<int>(mapData.size()) / MapWidth != 0)
@@ -107,11 +109,27 @@ void PlayScene::ReadMap() {
     for (int i = 0; i < MapHeight; i++) {
         for (int j = 0; j < MapWidth; j++) {
             const int num = mapData[i * MapWidth + j];
-            mapState[i][j] = num ? TILE_FLOOR : TILE_DIRT;
-            if (num)
-                TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
-            else
-                TileMapGroup->AddNewObject(new Engine::Image("play/dirt.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+            switch (num){
+                case 0: 
+                    mapState[i][j] = TILE_DIRT; 
+                    TileMapGroup->AddNewObject(new Engine::Image("play/dirt.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    break;
+                case 1: 
+                    mapState[i][j] = TILE_FLOOR; 
+                    TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    break;
+                case 2: 
+                    mapState[i][j] = TILE_PLAYER; 
+                    TileMapGroup->AddNewObject(new Engine::Image("play/player.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    break;
+                case 3: 
+                    mapState[i][j] = TILE_DOOR; 
+                    TileMapGroup->AddNewObject(new Engine::Image("play/door.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    break;
+            }
+            
+
+            
         }
     }
 }
