@@ -128,7 +128,7 @@ void Player::Update(float deltaTime) {
                 Position.x + Size.x > obj.x - 10 &&
                 Position.x < obj.x + obj.w + 10) {
                 obj.activated = true;
-                playScene->objects.push_back({obj.x, obj.y - 20, 50, 20, PlayScene::ObjectType::SPIKE});
+                playScene->objects.push_back({obj.x, obj.y - 20, 50, 20, 0, 0, PlayScene::ObjectType::SPIKE, false, 0, nullptr});
                 playScene->TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", obj.x, obj.y - 20, 50, 20));
                 break;
             }
