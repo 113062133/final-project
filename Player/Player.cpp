@@ -77,6 +77,8 @@ void Player::Update(float deltaTime) {
                     velocityY = 0;
                 }
             } else if (obj.type == PlayScene::ObjectType::DOOR) {
+                // 門：切換場景（示例）
+                Engine::GameEngine::GetInstance().ChangeScene("start");
             } 
         }
     }
