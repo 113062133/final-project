@@ -4,7 +4,6 @@
 #include "Engine/Point.hpp"
 #include "Engine/Sprite.hpp"
 #include <vector>
-#include "Scene/Playscene.hpp"
 
 class PlayScene;
 
