@@ -18,6 +18,7 @@
 #include "Scene/Playscene.hpp"
 #include "Scene/WinScene.hpp"
 #include "Trap/Spike.hpp"
+#include "UI/Component/Image.hpp"
 #include "UI/Component/ImageButton.hpp"
 #include "UI/Component/Label.hpp"
 #include "allegro5/keycodes.h"
@@ -60,6 +61,32 @@ void PlayScene::Terminate() {
 }
 void PlayScene::Update(float deltaTime) {
     player->Update(deltaTime);
+
+    for (auto& obj : objects) {
+        if (obj.type == ObjectType::MOVING_FLOOR && obj.activated) {
+            obj.y += obj.fallSpeed * deltaTime;
+            if (obj.image) {
+                obj.image->Position.y = obj.y;
+            }
+            // Optional：如果掉出畫面就移除
+            if (obj.y > Engine::GameEngine::GetInstance().GetScreenSize().y + 200) {
+                // 將 obj.type 改為無效類型以跳過後續判斷
+                obj.type = ObjectType::FLOOR; // 不再處理（或設 INVALID）
+            }
+        }
+        else if (obj.type == ObjectType::PUSH_FLOOR && obj.activated) {
+            float newX = obj.x + obj.movespeed * deltaTime;
+            // 檢查移動距離
+            if ((obj.movespeed < 0 && newX > obj.moveuntil) || (obj.movespeed > 0 && newX < obj.moveuntil)) {
+                obj.x = newX;
+                if (obj.image) {
+                    obj.image->Position.x = obj.x;
+                }
+            } else {
+                obj.activated = false; // 停止移動
+            }
+        }
+    }
 }
 void PlayScene::Draw() const {
     IScene::Draw();
@@ -117,21 +144,32 @@ void PlayScene::ReadMap() {
     
     std::ifstream fin(filename);
     std::string type;
-    float x, y, w, h;
+    float x, y, w, h, movespeed = 0, moveuntil = 0;;
     while (fin >> type >> x >> y >> w >> h) {
         if (type == "F") {
-            objects.push_back({x, y, w, h, ObjectType::FLOOR});
+            objects.push_back({x, y, w, h, movespeed, moveuntil, ObjectType::FLOOR, false, 0});
             TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", x, y, w, h));
         } else if (type == "P") {
             player = new Player("play/player.png", x, y, w/2, h);
             AddNewObject(player);
         } else if (type == "D") {
-            objects.push_back({x, y, w, h, ObjectType::DOOR});
-            TileMapGroup->AddNewObject(new Engine::Image("play/transporter.png", x, y - 50, 50, 100));
-            //door = new Door("play/door.png", x, y, w, h);
-            //AddNewObject(door);
-            //TileMapGroup->AddNewObject(door);
-        } else {
+            objects.push_back({x, y, w, h, movespeed, moveuntil, ObjectType::DOOR, false, 0});
+            TileMapGroup->AddNewObject(new Engine::Image("play/transporter.png", x, y, w, h));
+        } else if (type == "MF") {
+            auto* img = new Engine::Image("play/floor.png", x, y, w, h);
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, movespeed,  moveuntil, ObjectType::MOVING_FLOOR, false, 0, img});
+        } else if (type == "PF") {
+            fin >> movespeed >> moveuntil;
+            auto* img = new Engine::Image("play/floor.png", x, y, w, h);
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, movespeed,  moveuntil, ObjectType::PUSH_FLOOR, false, 0, img});
+        } else if (type == "SF") {
+            auto* img = new Engine::Image("play/floor.png", x, y, w, h);
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, movespeed, moveuntil, ObjectType::SPIKE_FLOOR, false, 0, img});
+        } 
+        else {
             Engine::LOG(Engine::ERROR) << "Unknown object type: " << type;
         }
     }
