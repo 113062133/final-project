@@ -1,10 +1,30 @@
-#include "Player/Player.hpp"
+/* #include "Player/Player.hpp"
 #include "Engine/Sprite.hpp"
 #include "Scene/Playscene.hpp"
 #include "Engine/GameEngine.hpp"
 #include "Engine/Group.hpp"
 #include "Engine/IScene.hpp"
 #include <algorithm>
+#include "Scene/FallingBackground.hpp" */
+
+#include "Engine/AudioHelper.hpp"
+#include "Engine/GameEngine.hpp"
+#include "Engine/Group.hpp"
+#include "Engine/LOG.hpp"
+#include "Engine/Point.hpp"
+#include "Engine/IObject.hpp"
+#include "Engine/Resources.hpp"
+#include "Scene/Playscene.hpp"
+#include "Scene/WinScene.hpp"
+#include "Trap/Spike.hpp"
+#include "UI/Component/Image.hpp"
+#include "UI/Component/ImageButton.hpp"
+#include "UI/Component/Label.hpp"
+#include "allegro5/keycodes.h"
+#include "Door/Door.hpp"
+#include "Player/Player.hpp"
+#include "Scene/FallingBackground.hpp"
+#include "allegro5/allegro_primitives.h"
 
 
 //int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
@@ -66,7 +86,12 @@ void Player::Update(float deltaTime) {
             }
             else if (obj.type == PlayScene::ObjectType::DOOR) {
                 // 門：切換場景（示例）
-                Engine::GameEngine::GetInstance().ChangeScene("start");
+                if(playScene -> flag == 0){
+                    auto falling = new Engine::Image("stage-select/background2.png", 0, -832, 1600, 832);
+                    playScene -> fallingBG = falling;
+                    playScene->AddNewObject(falling);
+                    playScene -> flag = 1;
+                }
             } else if (obj.type == PlayScene::ObjectType::SPIKE) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
@@ -113,8 +138,12 @@ void Player::Update(float deltaTime) {
                     Position.x += obj.speedx * deltaTime;
             }
             else if (obj.type == PlayScene::ObjectType::DOOR) {
-                // 門：切換場景（示例）
-                Engine::GameEngine::GetInstance().ChangeScene("start");
+                if(playScene -> flag == 0){
+                    auto falling = new Engine::Image("stage-select/background2.png", 0, -832, 1600, 832);
+                    playScene -> fallingBG = falling;
+                    playScene->AddNewObject(falling);
+                    playScene -> flag = 1;
+                }
             } else if (obj.type == PlayScene::ObjectType::SPIKE) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
