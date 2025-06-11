@@ -86,8 +86,10 @@ void Player::Update(float deltaTime) {
     for (auto& obj : playScene->objects) {
         if (obj.type == PlayScene::ObjectType::MOVING_FLOOR) {
             // 若玩家觸碰或非常接近，就啟動
+            float triggerMargin = 10.0f;
             if (!obj.activated &&
-                IsColliding(Position.x, Position.y + 1, Size.x, Size.y, obj.x, obj.y, obj.w, obj.h)) {
+                Position.x + Size.x > obj.x - triggerMargin &&
+                Position.x < obj.x + obj.w + triggerMargin) {
                 obj.activated = true;
                 obj.fallSpeed = 500; // 每秒下墜 500 px，可自行調整
             }
