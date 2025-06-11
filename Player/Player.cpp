@@ -118,8 +118,7 @@ void Player::Update(float deltaTime) {
             // 若玩家觸碰或非常接近，就啟動
             if (!obj.activated &&
                 Position.x + Size.x > obj.x - 10 &&
-                Position.x < obj.x + obj.w + 10 &&
-                Position.y > obj.y - 10 && Position.y < obj.y + 150) {
+                Position.x < obj.x + obj.w + 10) {
                 obj.activated = true;
                 obj.fallSpeed = 500; // 每秒下墜 500 px，可自行調整
                 break;
