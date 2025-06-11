@@ -41,6 +41,9 @@ Engine::Point PlayScene::GetClientSize() {
 }
 
 void PlayScene::Initialize() {
+    while(!objects.empty()){
+        objects.pop_back();
+    }
     int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
     int h = Engine::GameEngine::GetInstance().GetScreenSize().y;
     mapState.clear();
@@ -145,20 +148,38 @@ void PlayScene::OnKeyDown(int keyCode) {
     if (keyCode == ALLEGRO_KEY_W || keyCode == ALLEGRO_KEY_UP) {
         player->Jump();
     }
-    if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
-        player->isMovingLeft = true;
-    }
-    if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
-        player->isMovingRight = true;
+    if (MapId != 5) {
+        if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
+            player->isMovingLeft = true;
+        }
+        if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
+            player->isMovingRight = true;
+        }
+    } else {
+        if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
+            player->isMovingRight = true;
+        }
+        if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
+            player->isMovingLeft = true;
+        }
     }
 }
 void PlayScene::OnKeyUp(int keyCode) {
     IScene::OnKeyUp(keyCode);
-    if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
-        player->isMovingLeft = false;
-    }
-    if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
-        player->isMovingRight = false;
+    if (MapId != 5) {
+        if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
+            player->isMovingLeft = false;
+        }
+        if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
+            player->isMovingRight = false;
+        }
+    } else {
+        if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
+            player->isMovingRight = false;
+        }
+        if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
+            player->isMovingLeft = false;
+        }
     }
 }
 
@@ -180,6 +201,9 @@ void PlayScene::ReadMap() {
         } else if (type == "D") {
             objects.push_back({x, y, w, h, movespeed, moveuntil, ObjectType::DOOR, false, 0});
             TileMapGroup->AddNewObject(new Engine::Image("play/transporter.png", x, y, w, h));
+        } else if (type == "S") {
+            objects.push_back({x, y, w, h, movespeed, moveuntil, ObjectType::SPIKE, false, 0});
+            TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", x, y, w, h));
         } else if (type == "MF") {
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
