@@ -56,7 +56,7 @@ void Player::Update(float deltaTime) {
     // 垂直移動
     velocityY += gravity * deltaTime;
     Position.y += velocityY * deltaTime;
-    if (Position.y > Engine::GameEngine::GetInstance().GetScreenSize().y + 500) {
+    if (Position.y > Engine::GameEngine::GetInstance().GetScreenSize().y + 100) {
         Engine::GameEngine::GetInstance().ChangeScene("play");
         return;
     }
@@ -82,6 +82,22 @@ void Player::Update(float deltaTime) {
             } 
         }
     }
+
+    for (auto& obj : playScene->objects) {
+        if (obj.type == PlayScene::ObjectType::MOVING_FLOOR) {
+            // 若玩家觸碰或非常接近，就啟動
+            if (!obj.activated &&
+                IsColliding(Position.x, Position.y + 1, Size.x, Size.y, obj.x, obj.y, obj.w, obj.h)) {
+                obj.activated = true;
+                obj.fallSpeed = 500; // 每秒下墜 500 px，可自行調整
+            }
+        }
+    }
+
+    /* if (Position.y > Engine::GameEngine::GetInstance().GetScreenSize().y + 500) {
+        Engine::GameEngine::GetInstance().ChangeScene("play");
+        return;
+    } */
 
     Sprite::Update(deltaTime);
 }

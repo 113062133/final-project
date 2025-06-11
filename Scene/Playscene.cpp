@@ -18,6 +18,7 @@
 #include "Scene/Playscene.hpp"
 #include "Scene/WinScene.hpp"
 #include "Trap/Spike.hpp"
+#include "UI/Component/Image.hpp"
 #include "UI/Component/ImageButton.hpp"
 #include "UI/Component/Label.hpp"
 #include "allegro5/keycodes.h"
@@ -60,6 +61,20 @@ void PlayScene::Terminate() {
 }
 void PlayScene::Update(float deltaTime) {
     player->Update(deltaTime);
+
+    for (auto& obj : objects) {
+        if (obj.type == ObjectType::MOVING_FLOOR && obj.activated) {
+            obj.y += obj.fallSpeed * deltaTime;
+            if (obj.image) {
+                obj.image->Position.y = obj.y;
+            }
+            // Optional：如果掉出畫面就移除
+            if (obj.y > Engine::GameEngine::GetInstance().GetScreenSize().y + 200) {
+                // 將 obj.type 改為無效類型以跳過後續判斷
+                obj.type = ObjectType::FLOOR; // 不再處理（或設 INVALID）
+            }
+        }
+    }
 }
 void PlayScene::Draw() const {
     IScene::Draw();
@@ -128,6 +143,10 @@ void PlayScene::ReadMap() {
         } else if (type == "D") {
             objects.push_back({x, y, w, h, ObjectType::DOOR});
             TileMapGroup->AddNewObject(new Engine::Image("play/door.png", x, y, w, h));
+        } else if (type == "MF") {
+            auto* img = new Engine::Image("play/floor.png", x, y, w, h);
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, ObjectType::MOVING_FLOOR, false, 0, img});
         } else {
             Engine::LOG(Engine::ERROR) << "Unknown object type: " << type;
         }

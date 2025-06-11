@@ -28,10 +28,13 @@ public:
         TILE_DOOR
     };
 
-    enum class ObjectType { FLOOR, DOOR, SPIKE };
+    enum class ObjectType { FLOOR, DOOR, SPIKE, MOVING_FLOOR };
     struct Object {
         float x, y, w, h;
         ObjectType type;
+        bool activated = false;
+        float fallSpeed = 0;
+        Engine::Image* image = nullptr; // ⬅ 新增：該物件對應的圖片
     };
     std::vector<Object> objects; // 取代 floors
 
