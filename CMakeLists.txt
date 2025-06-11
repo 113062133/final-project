@@ -55,6 +55,9 @@ add_executable(LevelDevil
     Scene/StartScene.h
     Scene/WinScene.cpp
     Scene/WinScene.hpp
+    Scene/FallingBackground.cpp
+    Scene/FallingBackground.hpp
+    
 
     Trap/Saw.cpp
     Trap/Saw.hpp

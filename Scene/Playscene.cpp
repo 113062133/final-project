@@ -24,6 +24,7 @@
 #include "allegro5/keycodes.h"
 #include "Door/Door.hpp"
 #include "Player/Player.hpp"
+#include "Scene/FallingBackground.hpp"
 #include "allegro5/allegro_primitives.h"
 
 Player* player;
@@ -38,6 +39,7 @@ const Engine::Point PlayScene::EndGridPoint = Engine::Point(MapWidth, MapHeight 
 Engine::Point PlayScene::GetClientSize() {
     return Engine::Point(MapWidth * BlockSize, MapHeight * BlockSize);
 }
+
 void PlayScene::Initialize() {
     int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
     int h = Engine::GameEngine::GetInstance().GetScreenSize().y;
@@ -59,8 +61,31 @@ void PlayScene::Terminate() {
     AudioHelper::StopBGM(bgmId);
     IScene::Terminate();
 }
+
 void PlayScene::Update(float deltaTime) {
     player->Update(deltaTime);
+
+
+    if (fallingBG) {
+        if(fallingBGDelayTimer < 0){
+            fallingBG->Position.y += fallingBGSpeed * deltaTime;
+        }
+        if(fallingBGDelayTimer > 0){
+            fallingBGDelayTimer -= deltaTime;
+            if (fallingBGDelayTimer <= 0) {
+                fallingBGDelayTimer = -1.0f;
+                Engine::GameEngine::GetInstance().ChangeScene("start");
+                fallingBG = nullptr;
+                flag = 0;
+            }
+        }
+        else if (fallingBG->Position.y > 0) {
+            fallingBG->Position.y = 0;
+            //fallingBG = nullptr;
+            fallingBGDelayTimer = 0.5f;
+        }
+        
+    }
 
     for (auto& obj : objects) {
         if (obj.type == ObjectType::MOVING_FLOOR && obj.activated) {

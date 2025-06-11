@@ -10,10 +10,15 @@
 #include "Engine/IScene.hpp"
 #include "Engine/Point.hpp"
 #include "Door/Door.hpp"
+#include "Scene/FallingBackground.hpp"
 
 struct Floor {
     float x, y, w, h;
 };
+
+class FallingBackground;
+
+
 class PlayScene final : public Engine::IScene {
 private:
     ALLEGRO_SAMPLE_ID bgmId;
@@ -76,6 +81,12 @@ public:
     void ReadEnemyWave();
     void ConstructUI();
     void UIBtnClicked(int id);
+    
+    Engine::Image* fallingBG = nullptr;
+    float fallingBGSpeed = 900.0f;
+    float fallingBGDelayTimer = -1.0f; // -1 表示還沒開始延遲
+    int flag = 0;
+
 };
 
 

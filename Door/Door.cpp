@@ -19,24 +19,7 @@ Door::Door(std::string img, float x, float y, float w, float h) :
 
 
 void Door::Update(float deltaTime) {
-    /* if (state == Closed) {
-        animation_count = 0;
-    }
-    else if (state == Opening) {
-        //frameTimer += deltaTime;
-        animation_count = animation_count + 1;
-        if(animation_count >= 64){
-            animation_count = 64;
-            state = Closing;
-        }
-    }
-    else if(state == Closing){
-        animation_count = animation_count - 1;
-        if(animation_count < 0){
-            animation_count = 0;
-            Engine::GameEngine::GetInstance().ChangeScene("start");
-        }
-    } */
+    
 }
 
 void Door::Draw() const {
