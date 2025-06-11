@@ -179,6 +179,9 @@ void PlayScene::ReadMap() {
         } else if (type == "S") {
             objects.push_back({x, y, w, h, movespeed, moveuntil, ObjectType::SPIKE, false, 0});
             TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", x, y, w, h));
+        } else if (type == "MS") {
+            objects.push_back({x, y, w, h, movespeed, moveuntil, ObjectType::SPIKE, false, 0});
+            TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", x, y, w, h));
         } else if (type == "MF") {
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
