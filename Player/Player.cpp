@@ -96,6 +96,11 @@ void Player::Update(float deltaTime) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
+            } else if (obj.type == PlayScene::ObjectType::BOUNCE) {
+                if (onGround) {
+                    velocityY = -1500;
+                    onGround = false;
+                }
             }
         }
     }
@@ -148,6 +153,11 @@ void Player::Update(float deltaTime) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
+            } else if (obj.type == PlayScene::ObjectType::BOUNCE) {
+                if (onGround) {
+                    velocityY = -1500;
+                    onGround = false;
+                }
             }
         }
     }
