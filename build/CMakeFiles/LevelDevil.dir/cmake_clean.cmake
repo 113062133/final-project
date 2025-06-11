@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/LevelDevil.dir/Door/Door.cpp.obj"
+  "CMakeFiles/LevelDevil.dir/Door/Door.cpp.obj.d"
   "CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.obj"
   "CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.obj.d"
   "CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.obj"
@@ -37,6 +39,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.obj.d"
   "CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj"
   "CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj.d"
+  "CMakeFiles/LevelDevil.dir/Trap/Spike.cpp.obj"
+  "CMakeFiles/LevelDevil.dir/Trap/Spike.cpp.obj.d"
   "CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.obj"
   "CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.obj.d"
   "CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.obj"

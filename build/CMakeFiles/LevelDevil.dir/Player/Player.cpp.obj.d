@@ -812,7 +812,7 @@ CMakeFiles/LevelDevil.dir/Player/Player.cpp.obj: \
   c:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__functional/pointer_to_binary_function.h \
   c:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__functional/pointer_to_unary_function.h \
   c:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__functional/unary_negate.h \
-  C:/github/final-project/./Scene/PlayScene.hpp \
+  C:/github/final-project/./Scene/Playscene.hpp \
   C:/allegro/include/allegro5/allegro_audio.h \
   C:/allegro/include/allegro5/allegro.h \
   C:/allegro/include/allegro5/altime.h \
@@ -855,4 +855,5 @@ CMakeFiles/LevelDevil.dir/Player/Player.cpp.obj: \
   C:/github/final-project/./Engine/IScene.hpp \
   C:/github/final-project/./Engine/Group.hpp \
   C:/github/final-project/./Engine/IControl.hpp \
+  C:/github/final-project/./Door/Door.hpp \
   C:/github/final-project/./Engine/GameEngine.hpp

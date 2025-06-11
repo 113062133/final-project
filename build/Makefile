@@ -128,6 +128,30 @@ LevelDevil/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LevelDevil.dir\build.make CMakeFiles/LevelDevil.dir/build
 .PHONY : LevelDevil/fast
 
+Door/Door.obj: Door/Door.cpp.obj
+.PHONY : Door/Door.obj
+
+# target to build an object file
+Door/Door.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LevelDevil.dir\build.make CMakeFiles/LevelDevil.dir/Door/Door.cpp.obj
+.PHONY : Door/Door.cpp.obj
+
+Door/Door.i: Door/Door.cpp.i
+.PHONY : Door/Door.i
+
+# target to preprocess a source file
+Door/Door.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LevelDevil.dir\build.make CMakeFiles/LevelDevil.dir/Door/Door.cpp.i
+.PHONY : Door/Door.cpp.i
+
+Door/Door.s: Door/Door.cpp.s
+.PHONY : Door/Door.s
+
+# target to generate assembly for a file
+Door/Door.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LevelDevil.dir\build.make CMakeFiles/LevelDevil.dir/Door/Door.cpp.s
+.PHONY : Door/Door.cpp.s
+
 Engine/Allegro5Exception.obj: Engine/Allegro5Exception.cpp.obj
 .PHONY : Engine/Allegro5Exception.obj
 
@@ -584,6 +608,30 @@ Trap/Saw.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LevelDevil.dir\build.make CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.s
 .PHONY : Trap/Saw.cpp.s
 
+Trap/Spike.obj: Trap/Spike.cpp.obj
+.PHONY : Trap/Spike.obj
+
+# target to build an object file
+Trap/Spike.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LevelDevil.dir\build.make CMakeFiles/LevelDevil.dir/Trap/Spike.cpp.obj
+.PHONY : Trap/Spike.cpp.obj
+
+Trap/Spike.i: Trap/Spike.cpp.i
+.PHONY : Trap/Spike.i
+
+# target to preprocess a source file
+Trap/Spike.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LevelDevil.dir\build.make CMakeFiles/LevelDevil.dir/Trap/Spike.cpp.i
+.PHONY : Trap/Spike.cpp.i
+
+Trap/Spike.s: Trap/Spike.cpp.s
+.PHONY : Trap/Spike.s
+
+# target to generate assembly for a file
+Trap/Spike.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LevelDevil.dir\build.make CMakeFiles/LevelDevil.dir/Trap/Spike.cpp.s
+.PHONY : Trap/Spike.cpp.s
+
 UI/Component/Image.obj: UI/Component/Image.cpp.obj
 .PHONY : UI/Component/Image.obj
 
@@ -713,6 +761,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... LevelDevil
+	@echo ... Door/Door.obj
+	@echo ... Door/Door.i
+	@echo ... Door/Door.s
 	@echo ... Engine/Allegro5Exception.obj
 	@echo ... Engine/Allegro5Exception.i
 	@echo ... Engine/Allegro5Exception.s
@@ -770,6 +821,9 @@ help:
 	@echo ... Trap/Saw.obj
 	@echo ... Trap/Saw.i
 	@echo ... Trap/Saw.s
+	@echo ... Trap/Spike.obj
+	@echo ... Trap/Spike.i
+	@echo ... Trap/Spike.s
 	@echo ... UI/Component/Image.obj
 	@echo ... UI/Component/Image.i
 	@echo ... UI/Component/Image.s

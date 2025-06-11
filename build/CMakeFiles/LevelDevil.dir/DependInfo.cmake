@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/github/final-project/Door/Door.cpp" "CMakeFiles/LevelDevil.dir/Door/Door.cpp.obj" "gcc" "CMakeFiles/LevelDevil.dir/Door/Door.cpp.obj.d"
   "C:/github/final-project/Engine/Allegro5Exception.cpp" "CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.obj" "gcc" "CMakeFiles/LevelDevil.dir/Engine/Allegro5Exception.cpp.obj.d"
   "C:/github/final-project/Engine/AudioHelper.cpp" "CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.obj" "gcc" "CMakeFiles/LevelDevil.dir/Engine/AudioHelper.cpp.obj.d"
   "C:/github/final-project/Engine/Collider.cpp" "CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.obj" "gcc" "CMakeFiles/LevelDevil.dir/Engine/Collider.cpp.obj.d"
@@ -27,6 +28,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/github/final-project/Scene/StartScene.cpp" "CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.obj" "gcc" "CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.obj.d"
   "C:/github/final-project/Scene/WinScene.cpp" "CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.obj" "gcc" "CMakeFiles/LevelDevil.dir/Scene/WinScene.cpp.obj.d"
   "C:/github/final-project/Trap/Saw.cpp" "CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj" "gcc" "CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj.d"
+  "C:/github/final-project/Trap/Spike.cpp" "CMakeFiles/LevelDevil.dir/Trap/Spike.cpp.obj" "gcc" "CMakeFiles/LevelDevil.dir/Trap/Spike.cpp.obj.d"
   "C:/github/final-project/UI/Component/Image.cpp" "CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.obj" "gcc" "CMakeFiles/LevelDevil.dir/UI/Component/Image.cpp.obj.d"
   "C:/github/final-project/UI/Component/ImageButton.cpp" "CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.obj" "gcc" "CMakeFiles/LevelDevil.dir/UI/Component/ImageButton.cpp.obj.d"
   "C:/github/final-project/UI/Component/Label.cpp" "CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.obj" "gcc" "CMakeFiles/LevelDevil.dir/UI/Component/Label.cpp.obj.d"

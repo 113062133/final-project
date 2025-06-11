@@ -56,6 +56,10 @@ void Player::Update(float deltaTime) {
     // 垂直移動
     velocityY += gravity * deltaTime;
     Position.y += velocityY * deltaTime;
+    if (Position.y > Engine::GameEngine::GetInstance().GetScreenSize().y + 500) {
+        Engine::GameEngine::GetInstance().ChangeScene("play");
+        return;
+    }
 
     // ⛔ 檢查垂直碰撞
     onGround = false;

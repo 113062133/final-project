@@ -85,6 +85,12 @@
 },
 {
   "directory": "C:/github/final-project/build",
+  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Door\\Door.cpp.obj -c C:\\github\\final-project\\Door\\Door.cpp",
+  "file": "C:/github/final-project/Door/Door.cpp",
+  "output": "CMakeFiles/LevelDevil.dir/Door/Door.cpp.obj"
+},
+{
+  "directory": "C:/github/final-project/build",
   "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Scene\\Playscene.cpp.obj -c C:\\github\\final-project\\Scene\\Playscene.cpp",
   "file": "C:/github/final-project/Scene/Playscene.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.obj"
@@ -112,6 +118,12 @@
   "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Trap\\Saw.cpp.obj -c C:\\github\\final-project\\Trap\\Saw.cpp",
   "file": "C:/github/final-project/Trap/Saw.cpp",
   "output": "CMakeFiles/LevelDevil.dir/Trap/Saw.cpp.obj"
+},
+{
+  "directory": "C:/github/final-project/build",
+  "command": "c:\\Users\\csgau\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/LevelDevil.dir/includes_CXX.rsp -g -o CMakeFiles\\LevelDevil.dir\\Trap\\Spike.cpp.obj -c C:\\github\\final-project\\Trap\\Spike.cpp",
+  "file": "C:/github/final-project/Trap/Spike.cpp",
+  "output": "CMakeFiles/LevelDevil.dir/Trap/Spike.cpp.obj"
 },
 {
   "directory": "C:/github/final-project/build",

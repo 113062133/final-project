@@ -904,11 +904,14 @@ CMakeFiles/LevelDevil.dir/Scene/Playscene.cpp.obj: \
   C:/github/final-project/./Engine/LOG.hpp \
   C:/github/final-project/./Engine/Resources.hpp \
   C:/allegro/include/allegro5/allegro_font.h \
-  C:/github/final-project/./Scene/PlayScene.hpp \
+  C:/github/final-project/./Scene/Playscene.hpp \
   C:/github/final-project/./Player/Player.hpp \
   C:/github/final-project/./Engine/Sprite.hpp \
   C:/github/final-project/./UI/Component/Image.hpp \
   C:/github/final-project/./Engine/IScene.hpp \
+  C:/github/final-project/./Door/Door.hpp \
   C:/github/final-project/./Scene/WinScene.hpp \
   C:/github/final-project/./UI/Component/Label.hpp \
-  C:/github/final-project/./UI/Component/ImageButton.hpp
+  C:/github/final-project/./Trap/Spike.hpp \
+  C:/github/final-project/./UI/Component/ImageButton.hpp \
+  C:/allegro/include/allegro5/allegro_primitives.h

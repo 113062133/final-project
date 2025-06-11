@@ -906,6 +906,7 @@ CMakeFiles/LevelDevil.dir/main.cpp.obj: C:/github/final-project/main.cpp \
   C:/github/final-project/./Engine/IScene.hpp \
   C:/github/final-project/./Engine/Group.hpp \
   C:/github/final-project/./Engine/IControl.hpp \
+  C:/github/final-project/./Door/Door.hpp \
   C:/github/final-project/Scene/WinScene.hpp \
   C:/github/final-project/./UI/Component/Label.hpp \
   C:/allegro/include/allegro5/allegro_font.h \

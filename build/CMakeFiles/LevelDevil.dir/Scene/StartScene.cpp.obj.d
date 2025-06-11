@@ -857,10 +857,11 @@ CMakeFiles/LevelDevil.dir/Scene/StartScene.cpp.obj: \
   C:/github/final-project/./Engine/GameEngine.hpp \
   C:/github/final-project/./Engine/Resources.hpp \
   C:/allegro/include/allegro5/allegro_font.h \
-  C:/github/final-project/Scene/PlayScene.hpp \
+  C:/github/final-project/Scene/Playscene.hpp \
   C:/github/final-project/./Player/Player.hpp \
   C:/github/final-project/./Engine/Sprite.hpp \
   C:/github/final-project/./UI/Component/Image.hpp \
+  C:/github/final-project/./Door/Door.hpp \
   C:/github/final-project/./Scene/StartScene.h \
   C:/github/final-project/./UI/Component/ImageButton.hpp \
   C:/github/final-project/./UI/Component/Label.hpp

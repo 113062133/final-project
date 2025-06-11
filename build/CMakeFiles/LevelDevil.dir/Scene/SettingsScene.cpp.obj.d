@@ -851,7 +851,7 @@ CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.obj: \
   C:/github/final-project/./Engine/Point.hpp \
   C:/github/final-project/./Engine/Resources.hpp \
   C:/allegro/include/allegro5/allegro_font.h \
-  C:/github/final-project/Scene/PlayScene.hpp \
+  C:/github/final-project/Scene/Playscene.hpp \
   c:/Users/csgau/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/list \
   C:/github/final-project/./Player/Player.hpp \
   C:/github/final-project/./Engine/Sprite.hpp \
@@ -860,6 +860,7 @@ CMakeFiles/LevelDevil.dir/Scene/SettingsScene.cpp.obj: \
   C:/github/final-project/./Engine/IScene.hpp \
   C:/github/final-project/./Engine/Group.hpp \
   C:/github/final-project/./Engine/IControl.hpp \
+  C:/github/final-project/./Door/Door.hpp \
   C:/github/final-project/./Scene/SettingsScene.hpp \
   C:/github/final-project/./UI/Component/ImageButton.hpp \
   C:/github/final-project/./UI/Component/Label.hpp \
