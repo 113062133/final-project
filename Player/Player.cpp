@@ -27,6 +27,16 @@ bool Player::IsColliding(float ax, float ay, float aw, float ah,
 }
 
 void Player::Update(float deltaTime) {
+    // 檢查透明方塊碰撞
+    for (auto& block : playScene->triggerBlocks) {
+        if (IsColliding(Position.x, Position.y, Size.x, Size.y,
+                        block.x, block.y, block.w, block.h)) {
+            if (block.target && !block.target->activated) {
+                block.target->activated = true;
+                printf("yes %d %d\n",block.x,block.y);
+            }
+        }
+    }
     float oldX = Position.x;
     float oldY = Position.y;
 
@@ -50,7 +60,7 @@ void Player::Update(float deltaTime) {
             else if(obj.type == PlayScene::ObjectType::PUSH_FLOOR){
                 
                 if(obj.activated)
-                    Position.x += obj.movespeed * deltaTime;
+                    Position.x += obj.speedx * deltaTime;
                 if (dx > 0) Position.x = obj.x - Size.x; // 從右撞牆
                 else if (dx < 0) Position.x = obj.x + obj.w; // 從左撞牆
             }
@@ -100,7 +110,7 @@ void Player::Update(float deltaTime) {
                     velocityY = 0;
                 }
                 if(obj.activated)
-                    Position.x += obj.movespeed * deltaTime;
+                    Position.x += obj.speedx * deltaTime;
             }
             else if (obj.type == PlayScene::ObjectType::DOOR) {
                 // 門：切換場景（示例）
@@ -112,15 +122,15 @@ void Player::Update(float deltaTime) {
             }
         }
     }
-
-    for (auto& obj : playScene->objects) {
+    //trigger
+    /*for (auto& obj : playScene->objects) {
         if (obj.type == PlayScene::ObjectType::MOVING_FLOOR) {
             // 若玩家觸碰或非常接近，就啟動
             if (!obj.activated &&
                 Position.x + Size.x > obj.x - 10 &&
                 Position.x < obj.x + obj.w + 10) {
                 obj.activated = true;
-                obj.fallSpeed = 500; // 每秒下墜 500 px，可自行調整
+                obj.speedy = 500; // 每秒下墜 500 px，可自行調整
                 break;
             }
         } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR) {
@@ -128,7 +138,7 @@ void Player::Update(float deltaTime) {
                 Position.x + Size.x > obj.x - 10 &&
                 Position.x < obj.x + obj.w + 10) {
                 obj.activated = true;
-                playScene->objects.push_back({obj.x, obj.y - 20, obj.w, 20, 0, 0, PlayScene::ObjectType::SPIKE});
+                playScene->objects.push_back({obj.x, obj.y - 20, obj.w, 20, 0, 0,0, PlayScene::ObjectType::SPIKE});
                 playScene->TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", obj.x, obj.y - 20, obj.w, 20));
                 break;
             }
@@ -142,7 +152,7 @@ void Player::Update(float deltaTime) {
                 break;
             }
         }
-    }
+    }*/
 
     Sprite::Update(deltaTime);
 }

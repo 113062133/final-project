@@ -42,6 +42,9 @@ void PlayScene::Initialize() {
     while(!objects.empty()){
         objects.pop_back();
     }
+    while(!triggerBlocks.empty()){
+        triggerBlocks.pop_back();
+    }
     int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
     int h = Engine::GameEngine::GetInstance().GetScreenSize().y;
     mapState.clear();
@@ -67,7 +70,7 @@ void PlayScene::Update(float deltaTime) {
 
     for (auto& obj : objects) {
         if (obj.type == ObjectType::MOVING_FLOOR && obj.activated) {
-            obj.y += obj.fallSpeed * deltaTime;
+            obj.y += obj.speedy * deltaTime;
             if (obj.image) {
                 obj.image->Position.y = obj.y;
             }
@@ -78,9 +81,9 @@ void PlayScene::Update(float deltaTime) {
             }
         }
         else if (obj.type == ObjectType::PUSH_FLOOR && obj.activated) {
-            float newX = obj.x + obj.movespeed * deltaTime;
+            float newX = obj.x + obj.speedx * deltaTime;
             // 檢查移動距離
-            if ((obj.movespeed < 0 && newX > obj.moveuntil) || (obj.movespeed > 0 && newX < obj.moveuntil)) {
+            if ((obj.speedx < 0 && newX > obj.moveuntil) || (obj.speedx > 0 && newX < obj.moveuntil)) {
                 obj.x = newX;
                 if (obj.image) {
                     obj.image->Position.x = obj.x;
@@ -158,44 +161,62 @@ void PlayScene::OnKeyUp(int keyCode) {
     }
 }
 
-
 void PlayScene::ReadMap() {
     std::string filename = std::string("Resource/level") + std::to_string(MapId) + ".txt";
     // Read map file.
     
     std::ifstream fin(filename);
     std::string type;
-    float x, y, w, h, movespeed = 0, moveuntil = 0;;
+    float x, y, w, h, speedx = 0,speedy = 0 ,moveuntil = 0;;
     while (fin >> type >> x >> y >> w >> h) {
         if (type == "F") {
-            objects.push_back({x, y, w, h, movespeed, moveuntil, ObjectType::FLOOR, false, 0});
+            objects.push_back({x, y, w, h, speedx,speedy, moveuntil, ObjectType::FLOOR, false, 0});
             TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", x, y, w, h));
         } else if (type == "P") {
             player = new Player("play/player.png", x, y, w/2, h);
             AddNewObject(player);
         } else if (type == "D") {
-            objects.push_back({x, y, w, h, movespeed, moveuntil, ObjectType::DOOR, false, 0});
+            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::DOOR, false});
             TileMapGroup->AddNewObject(new Engine::Image("play/door.png", x, y, w, h));
         } else if (type == "S") {
-            objects.push_back({x, y, w, h, movespeed, moveuntil, ObjectType::SPIKE, false, 0});
+            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::SPIKE, false});
             TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", x, y, w, h));
         } else if (type == "MS") {
-            objects.push_back({x, y, w, h, movespeed, moveuntil, ObjectType::SPIKE, false, 0});
+            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::SPIKE, false});
             TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", x, y, w, h));
         } else if (type == "MF") {
+            fin >> speedy;
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
-            objects.push_back({x, y, w, h, movespeed,  moveuntil, ObjectType::MOVING_FLOOR, false, 0, img});
+            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::MOVING_FLOOR, false, img});
         } else if (type == "PF") {
-            fin >> movespeed >> moveuntil;
+            fin >> speedx >> moveuntil;
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
-            objects.push_back({x, y, w, h, movespeed,  moveuntil, ObjectType::PUSH_FLOOR, false, 0, img});
+            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::PUSH_FLOOR, false,img});
         } else if (type == "SF") {
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
-            objects.push_back({x, y, w, h, movespeed, moveuntil, ObjectType::SPIKE_FLOOR, false, 0, img});
-        } 
+            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::SPIKE_FLOOR, false, img});
+        } else if (type == "T") {
+            float target_x, target_y;
+            fin >> target_x >> target_y;
+            TriggerBlock block{x, y, w, h, nullptr};
+            for (auto& obj : objects) {
+                if (obj.x == target_x && obj.y == target_y) {
+                    block.target = &obj;
+                    break;
+                }
+            }
+            if (block.target) {
+                triggerBlocks.push_back(block);
+                Engine::LOG(Engine::INFO) << "TriggerBlock added at (" << x << "," << y << ") targeting "
+                                           << " at (" << target_x << "," << target_y << ")";
+            } else {
+                Engine::LOG(Engine::ERROR) << "TriggerBlock target not found: " 
+                                          << " at (" << target_x << "," << target_y << ")";
+            }
+        }
         else {
             Engine::LOG(Engine::ERROR) << "Unknown object type: " << type;
         }

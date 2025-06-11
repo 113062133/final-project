@@ -31,14 +31,30 @@ public:
     enum class ObjectType { FLOOR, DOOR, SPIKE, MOVING_FLOOR , SPIKE_FLOOR, PUSH_FLOOR};
     struct Object {
         float x, y, w, h;
-        float movespeed = 0;
+        float speedx = 0;
+        float speedy = 0;
         float moveuntil = 0;
         ObjectType type;
         bool activated = false;
-        float fallSpeed = 0;
         Engine::Image* image = nullptr; // ⬅ 新增：該物件對應的圖片
     };
-    std::vector<Object> objects; // 取代 floors
+    std::vector<Object> objects; 
+
+    // 透明方塊結構
+    struct TriggerBlock {
+        float x, y, w, h; // 觸發區域
+        Object* target;   // 目標物件指標
+    };
+    std::vector<TriggerBlock> triggerBlocks;
+
+    ObjectType StringToObjectType(const std::string& type) {
+        if (type == "F") return ObjectType::FLOOR;
+        if (type == "D") return ObjectType::DOOR;
+        if (type == "S") return ObjectType::SPIKE;
+        if (type == "MF") return ObjectType::MOVING_FLOOR;
+        if (type == "PF") return ObjectType::PUSH_FLOOR;
+        return ObjectType::FLOOR; // 預設值
+    }
 
     static bool DebugMode;
     static const std::vector<Engine::Point> directions;
