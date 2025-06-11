@@ -123,20 +123,38 @@ void PlayScene::OnKeyDown(int keyCode) {
     if (keyCode == ALLEGRO_KEY_W || keyCode == ALLEGRO_KEY_UP) {
         player->Jump();
     }
-    if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
-        player->isMovingLeft = true;
-    }
-    if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
-        player->isMovingRight = true;
+    if (MapId != 5) {
+        if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
+            player->isMovingLeft = true;
+        }
+        if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
+            player->isMovingRight = true;
+        }
+    } else {
+        if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
+            player->isMovingRight = true;
+        }
+        if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
+            player->isMovingLeft = true;
+        }
     }
 }
 void PlayScene::OnKeyUp(int keyCode) {
     IScene::OnKeyUp(keyCode);
-    if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
-        player->isMovingLeft = false;
-    }
-    if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
-        player->isMovingRight = false;
+    if (MapId != 5) {
+        if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
+            player->isMovingLeft = false;
+        }
+        if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
+            player->isMovingRight = false;
+        }
+    } else {
+        if (keyCode == ALLEGRO_KEY_A || keyCode == ALLEGRO_KEY_LEFT) {
+            player->isMovingRight = false;
+        }
+        if (keyCode == ALLEGRO_KEY_D || keyCode == ALLEGRO_KEY_RIGHT) {
+            player->isMovingLeft = false;
+        }
     }
 }
 
