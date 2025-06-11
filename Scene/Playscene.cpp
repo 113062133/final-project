@@ -85,7 +85,7 @@ void PlayScene::Update(float deltaTime) {
         else if (fallingBG->Position.y > 0) {
             fallingBG->Position.y = 0;
             //fallingBG = nullptr;
-            fallingBGDelayTimer = 0.5f;
+            fallingBGDelayTimer = 1.0f;
         }
         
     }
