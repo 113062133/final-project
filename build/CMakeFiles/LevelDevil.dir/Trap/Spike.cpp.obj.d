@@ -1,6 +1,6 @@
 CMakeFiles/LevelDevil.dir/Trap/Spike.cpp.obj: \
   C:/github/final-project/Trap/Spike.cpp \
-  C:/github/final-project/Trap/Spike.hpp \
+  C:/github/final-project/./Trap/Spike.hpp \
   C:/github/final-project/./Engine/Point.hpp \
   C:/github/final-project/./Engine/Sprite.hpp \
   C:/allegro/include/allegro5/color.h C:/allegro/include/allegro5/base.h \

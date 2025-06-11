@@ -164,7 +164,12 @@ void PlayScene::ReadMap() {
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
             objects.push_back({x, y, w, h, movespeed,  moveuntil, ObjectType::PUSH_FLOOR, false, 0, img});
-        } else {
+        } else if (type == "SF") {
+            auto* img = new Engine::Image("play/floor.png", x, y, w, h);
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, movespeed, moveuntil, ObjectType::SPIKE_FLOOR, false, 0, img});
+        } 
+        else {
             Engine::LOG(Engine::ERROR) << "Unknown object type: " << type;
         }
     }

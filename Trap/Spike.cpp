@@ -1,4 +1,4 @@
-#include "Spike.hpp"
+#include "Trap/Spike.hpp"
 #include "Engine/Sprite.hpp"
 #include "Scene/Playscene.hpp"
 #include "Engine/GameEngine.hpp"
