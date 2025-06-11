@@ -94,7 +94,7 @@ void PlayScene::Update(float deltaTime) {
     }
 
     for (auto& obj : objects) {
-        if (obj.type == ObjectType::MOVING_FLOOR && obj.activated) {
+        if (obj.type == ObjectType::FALL_FLOOR && obj.activated) {
             obj.y += obj.speedy * deltaTime;
             if (obj.image) {
                 obj.image->Position.y = obj.y;
@@ -115,6 +115,19 @@ void PlayScene::Update(float deltaTime) {
                 }
             } else {
                 obj.activated = false; // 停止移動
+            }
+        }
+        else if (obj.type == ObjectType::MOVE_FLOOR && obj.activated) {
+            float newY = obj.y + obj.speedy * deltaTime;
+            // 檢查移動距離
+            if ((obj.speedy < 0 && newY > obj.moveuntil) || (obj.speedy > 0 && newY < obj.moveuntil)) {
+                obj.y = newY;
+                if (obj.image) {
+                    obj.image->Position.y = obj.y;
+                }
+            } else {
+                obj.activated = false; // 停止移動
+                obj.type = ObjectType::FLOOR;
             }
         }
     }
@@ -212,16 +225,21 @@ void PlayScene::ReadMap() {
         } else if (type == "MS") {
             objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::SPIKE, false});
             TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", x, y, w, h));
-        } else if (type == "MF") {
+        } else if (type == "FF") {
             fin >> speedy;
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
-            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::MOVING_FLOOR, false, img});
+            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::FALL_FLOOR, false, img});
         } else if (type == "PF") {
             fin >> speedx >> moveuntil;
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
             objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::PUSH_FLOOR, false,img});
+        } else if (type == "MF") {
+            fin >> speedy >> moveuntil;
+            auto* img = new Engine::Image("play/floor.png", x, y, w, h);
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::MOVE_FLOOR, false,img});
         } else if (type == "SF") {
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);

@@ -33,7 +33,7 @@ public:
         TILE_DOOR
     };
 
-    enum class ObjectType { FLOOR, DOOR, SPIKE, BOUNCE, MOVING_FLOOR , SPIKE_FLOOR, PUSH_FLOOR};
+    enum class ObjectType { FLOOR, DOOR, SPIKE, BOUNCE, FALL_FLOOR , SPIKE_FLOOR, PUSH_FLOOR, MOVE_FLOOR};
     struct Object {
         float x, y, w, h;
         float speedx = 0;
@@ -57,8 +57,9 @@ public:
         if (type == "F") return ObjectType::FLOOR;
         if (type == "D") return ObjectType::DOOR;
         if (type == "S") return ObjectType::SPIKE;
-        if (type == "MF") return ObjectType::MOVING_FLOOR;
+        if (type == "FF") return ObjectType::FALL_FLOOR;
         if (type == "PF") return ObjectType::PUSH_FLOOR;
+        if (type == "MF") return ObjectType::MOVE_FLOOR;
         if (type == "SF") return ObjectType::SPIKE_FLOOR;
         return ObjectType::FLOOR; // 預設值
     }
