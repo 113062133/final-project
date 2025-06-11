@@ -127,7 +127,10 @@ void PlayScene::ReadMap() {
             AddNewObject(player);
         } else if (type == "D") {
             objects.push_back({x, y, w, h, ObjectType::DOOR});
-            TileMapGroup->AddNewObject(new Engine::Image("play/door.png", x, y, w, h));
+            TileMapGroup->AddNewObject(new Engine::Image("play/transporter.png", x, y - 50, 50, 100));
+            //door = new Door("play/door.png", x, y, w, h);
+            //AddNewObject(door);
+            //TileMapGroup->AddNewObject(door);
         } else {
             Engine::LOG(Engine::ERROR) << "Unknown object type: " << type;
         }

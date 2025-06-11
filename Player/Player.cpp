@@ -48,7 +48,7 @@ void Player::Update(float deltaTime) {
                 else if (dx < 0) Position.x = obj.x + obj.w; // 從左撞牆
             } else if (obj.type == PlayScene::ObjectType::DOOR) {
                 // 門：切換場景（示例）
-                Engine::GameEngine::GetInstance().ChangeScene("start");
+                Engine::GameEngine::GetInstance().ChangeScene("win");
             } 
         }
     }
@@ -78,7 +78,7 @@ void Player::Update(float deltaTime) {
                 }
             } else if (obj.type == PlayScene::ObjectType::DOOR) {
                 // 門：切換場景（示例）
-                Engine::GameEngine::GetInstance().ChangeScene("start");
+                Engine::GameEngine::GetInstance().ChangeScene("win");
             } 
         }
     }
