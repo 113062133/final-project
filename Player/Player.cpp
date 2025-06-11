@@ -49,7 +49,11 @@ void Player::Update(float deltaTime) {
             } else if (obj.type == PlayScene::ObjectType::DOOR) {
                 // 門：切換場景（示例）
                 Engine::GameEngine::GetInstance().ChangeScene("start");
-            } 
+            } else if (obj.type == PlayScene::ObjectType::SPIKE) {
+                Engine::GameEngine::GetInstance().ChangeScene("play");
+            } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
+                Engine::GameEngine::GetInstance().ChangeScene("play");
+            }
         }
     }
 
@@ -79,7 +83,11 @@ void Player::Update(float deltaTime) {
             } else if (obj.type == PlayScene::ObjectType::DOOR) {
                 // 門：切換場景（示例）
                 Engine::GameEngine::GetInstance().ChangeScene("start");
-            } 
+            } else if (obj.type == PlayScene::ObjectType::SPIKE) {
+                Engine::GameEngine::GetInstance().ChangeScene("play");
+            } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
+                Engine::GameEngine::GetInstance().ChangeScene("play");
+            }
         }
     }
 
@@ -93,13 +101,17 @@ void Player::Update(float deltaTime) {
                 obj.fallSpeed = 500; // 每秒下墜 500 px，可自行調整
                 break;
             }
+        } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR) {
+            if (!obj.activated &&
+                Position.x + Size.x > obj.x - 10 &&
+                Position.x < obj.x + obj.w + 10) {
+                obj.activated = true;
+                playScene->objects.push_back({obj.x, obj.y - 20, 50, 20, PlayScene::ObjectType::SPIKE});
+                playScene->TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", obj.x, obj.y - 20, 50, 20));
+                break;
+            }
         }
     }
-
-    /* if (Position.y > Engine::GameEngine::GetInstance().GetScreenSize().y + 500) {
-        Engine::GameEngine::GetInstance().ChangeScene("play");
-        return;
-    } */
 
     Sprite::Update(deltaTime);
 }

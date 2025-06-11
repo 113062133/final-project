@@ -135,18 +135,28 @@ void PlayScene::ReadMap() {
     float x, y, w, h;
     while (fin >> type >> x >> y >> w >> h) {
         if (type == "F") {
-            objects.push_back({x, y, w, h, ObjectType::FLOOR});
-            TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", x, y, w, h));
+            auto* img = new Engine::Image("play/floor.png", x, y, w, h);
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, ObjectType::FLOOR, false, 0, img});
         } else if (type == "P") {
             player = new Player("play/player.png", x, y, w/2, h);
             AddNewObject(player);
         } else if (type == "D") {
-            objects.push_back({x, y, w, h, ObjectType::DOOR});
-            TileMapGroup->AddNewObject(new Engine::Image("play/door.png", x, y, w, h));
+            auto* img = new Engine::Image("play/door.png", x, y, w, h);
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, ObjectType::DOOR, false, 0, img});
+        } else if (type == "S") {
+            auto* img = new Engine::Image("play/spike1.png", x, y, w, h);
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, ObjectType::SPIKE, false, 0, img});
         } else if (type == "MF") {
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
             objects.push_back({x, y, w, h, ObjectType::MOVING_FLOOR, false, 0, img});
+        } else if (type == "SF") {
+            auto* img = new Engine::Image("play/floor.png", x, y, w, h);
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, ObjectType::SPIKE_FLOOR, false, 0, img});
         } else {
             Engine::LOG(Engine::ERROR) << "Unknown object type: " << type;
         }
