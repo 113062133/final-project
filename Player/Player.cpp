@@ -24,6 +24,7 @@
 #include "Door/Door.hpp"
 #include "Player/Player.hpp"
 #include "Scene/FallingBackground.hpp"
+#include "Scene/Playscene.hpp"
 #include "allegro5/allegro_primitives.h"
 
 
@@ -53,7 +54,10 @@ void Player::Update(float deltaTime) {
                         block.x, block.y, block.w, block.h)) {
             if (block.target && !block.target->activated) {
                 block.target->activated = true;
-                printf("yes %d %d\n",block.x,block.y);
+                if(block.target->type == PlayScene::ObjectType::SPIKE_FLOOR){
+                    playScene->objects.push_back({block.target->x, block.target->y - 20, block.target->w, 20, 0, 0,0, PlayScene::ObjectType::SPIKE});
+                    playScene->TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", block.target->x, block.target->y - 20, block.target->w, 20));
+                }
             }
         }
     }
@@ -152,6 +156,7 @@ void Player::Update(float deltaTime) {
             } else if (obj.type == PlayScene::ObjectType::SPIKE) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
+                
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::BOUNCE) {
                 if (onGround) {

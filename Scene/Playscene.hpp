@@ -48,6 +48,7 @@ public:
     // 透明方塊結構
     struct TriggerBlock {
         float x, y, w, h; // 觸發區域
+        ObjectType type;
         Object* target;   // 目標物件指標
     };
     std::vector<TriggerBlock> triggerBlocks;
@@ -58,6 +59,7 @@ public:
         if (type == "S") return ObjectType::SPIKE;
         if (type == "MF") return ObjectType::MOVING_FLOOR;
         if (type == "PF") return ObjectType::PUSH_FLOOR;
+        if (type == "SF") return ObjectType::SPIKE_FLOOR;
         return ObjectType::FLOOR; // 預設值
     }
 

@@ -228,8 +228,8 @@ void PlayScene::ReadMap() {
             objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::SPIKE_FLOOR, false, img});
         } else if (type == "T") {
             float target_x, target_y;
-            fin >> target_x >> target_y;
-            TriggerBlock block{x, y, w, h, nullptr};
+            fin >> type >> target_x >> target_y;
+            TriggerBlock block{x, y, w, h, StringToObjectType(type), nullptr};
             for (auto& obj : objects) {
                 if (obj.x == target_x && obj.y == target_y) {
                     block.target = &obj;

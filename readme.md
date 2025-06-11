@@ -3,4 +3,4 @@
 - 
 ## map 
 - object => x,y,w,h,speedx,speedy,moveuntill,triggertime,type,activated,img
-- T => x,y,w,h,targetx,targety
+- T => x,y,w,h, targettype, targetx,targety
