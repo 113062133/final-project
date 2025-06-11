@@ -7,8 +7,8 @@
 #include <algorithm>
 
 
-int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
-int h = Engine::GameEngine::GetInstance().GetScreenSize().y;
+//int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
+//int h = Engine::GameEngine::GetInstance().GetScreenSize().y;
 
 PlayScene* Player::getPlayScene() {
     return dynamic_cast<PlayScene*>(Engine::GameEngine::GetInstance().GetActiveScene());
@@ -47,8 +47,12 @@ void Player::Update(float deltaTime) {
                 if (dx > 0) Position.x = obj.x - Size.x; // 從右撞牆
                 else if (dx < 0) Position.x = obj.x + obj.w; // 從左撞牆
             }
-             else if(obj.type == PlayScene::ObjectType::PUSH_FLOOR){
-                Position.x = obj.x;
+            else if(obj.type == PlayScene::ObjectType::PUSH_FLOOR){
+                
+                if(obj.activated)
+                    Position.x += obj.movespeed * deltaTime;
+                if (dx > 0) Position.x = obj.x - Size.x; // 從右撞牆
+                else if (dx < 0) Position.x = obj.x + obj.w; // 從左撞牆
             }
             else if (obj.type == PlayScene::ObjectType::DOOR) {
                 // 門：切換場景（示例）
@@ -70,7 +74,7 @@ void Player::Update(float deltaTime) {
    for (const auto& obj : playScene->objects) {
         if (IsColliding(Position.x, Position.y, Size.x, Size.y,
                         obj.x, obj.y, obj.w, obj.h)) {
-            if (obj.type == PlayScene::ObjectType::FLOOR || obj.type == PlayScene::ObjectType::PUSH_FLOOR) {
+            if (obj.type == PlayScene::ObjectType::FLOOR ) {
                 // 地板：處理地面和天花板
                 if (velocityY > 0) { // 落地
                     Position.y = obj.y - Size.y;
@@ -82,7 +86,17 @@ void Player::Update(float deltaTime) {
                 }
             } 
             else if(obj.type == PlayScene::ObjectType::PUSH_FLOOR){
-
+                // 地板：處理地面和天花板
+                if (velocityY > 0) { // 落地
+                    Position.y = obj.y - Size.y;
+                    velocityY = 0;
+                    onGround = true;
+                } else if (velocityY < 0) { // 頭撞天花板
+                    Position.y = obj.y + obj.h;
+                    velocityY = 0;
+                }
+                if(obj.activated)
+                    Position.x += obj.movespeed * deltaTime;
             }
             else if (obj.type == PlayScene::ObjectType::DOOR) {
                 // 門：切換場景（示例）
@@ -105,8 +119,8 @@ void Player::Update(float deltaTime) {
         else if (obj.type == PlayScene::ObjectType::PUSH_FLOOR) {
             // 若玩家觸碰或非常接近，就啟動
             if (!obj.activated &&
-                Position.x + Size.x > obj.x - 10 &&
-                Position.x < obj.x + obj.w + 10) {
+                Position.x + Size.x > obj.x - 30 &&
+                Position.x < obj.x + obj.w + 30) {
                 obj.activated = true;
                 break;
             }
