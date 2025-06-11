@@ -202,7 +202,7 @@ void PlayScene::ReadMap() {
             AddNewObject(player);
         } else if (type == "D") {
             objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::DOOR, false});
-            TileMapGroup->AddNewObject(new Engine::Image("play/door.png", x, y, w, h));
+            TileMapGroup->AddNewObject(new Engine::Image("play/transporter.png", x, y, w, h));
         } else if (type == "S") {
             objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::SPIKE, false});
             TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", x, y, w, h));
