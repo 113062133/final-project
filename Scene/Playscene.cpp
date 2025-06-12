@@ -62,6 +62,15 @@ void PlayScene::Initialize() {
     ReadMap();
     // Start BGM.
     bgmId = AudioHelper::PlayBGM("play.ogg");
+
+    //back btn
+    Engine::ImageButton *btn;
+    btn = new Engine::ImageButton("play/arrow.png", "play/arrow-1.png", 20, 20, 50, 50);
+    btn->SetOnClickCallback(std::bind(&PlayScene::BackOnClick, this));
+    AddNewControlObject(btn);
+    btn = new Engine::ImageButton("play/restart.png", "play/restart-1.png", 85, 20, 60, 50);
+    btn->SetOnClickCallback(std::bind(&PlayScene::RestartOnClick, this));
+    AddNewControlObject(btn);
 }
 void PlayScene::Terminate() {
     AudioHelper::StopBGM(bgmId);
@@ -308,4 +317,10 @@ void PlayScene::ConstructUI() {
 }
 void PlayScene::UIBtnClicked(int id) {
     
+}
+void PlayScene::BackOnClick() {
+    Engine::GameEngine::GetInstance().ChangeScene("start");
+}
+void PlayScene::RestartOnClick() {
+    Engine::GameEngine::GetInstance().ChangeScene("play");
 }
