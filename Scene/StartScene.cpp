@@ -107,10 +107,10 @@ void StartScene::Initialize() {
     AddNewControlObject(btn);
 
     //settings button
-    btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/yellow.png", 10, h - 150, 350, 130);
+    btn = new Engine::ImageButton("stage-select/setting-button-1.png", "stage-select/setting-button-2.png", 20, h - 70, 50, 50);
     btn->SetOnClickCallback(std::bind(&StartScene::SettingsOnClick, this, 17));
     AddNewControlObject(btn);
-    AddNewObject(new Engine::Label("Settings", "pirulen.ttf", 48, 185, h - 85, 0, 0, 0, 255, 0.5, 0.5));
+    //AddNewObject(new Engine::Label("Settings", "pirulen.ttf", 48, 185, h - 85, 0, 0, 0, 255, 0.5, 0.5));
 }
 void StartScene::Terminate() {
     IScene::Terminate();

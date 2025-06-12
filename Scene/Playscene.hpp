@@ -101,6 +101,8 @@ public:
     void OnKeyUp(int keyCode) override;
     void ReadMap();
     void ReadEnemyWave();
+    void BackOnClick();
+    void RestartOnClick();
     void ConstructUI();
     void UIBtnClicked(int id);
     
