@@ -155,6 +155,18 @@ void PlayScene::Update(float deltaTime) {
                 obj.speedy = std::abs(obj.speedy);
             }
         }
+        else if (obj.type == ObjectType::MOVE_SPIKE && obj.activated) {
+            float newX = obj.x + obj.speedx * deltaTime;
+            // 檢查移動距離
+            if ((obj.speedx < 0 && newX >= obj.moveuntil) || (obj.speedx > 0 && newX <= obj.moveuntil)) {
+                obj.x = newX;
+                if (obj.image) {
+                    obj.image->Position.x = obj.x;
+                }
+            } else {
+                obj.activated = false; // 停止移動
+            }
+        }
     }
 }
 void PlayScene::Draw() const {
@@ -255,6 +267,7 @@ void PlayScene::ReadMap() {
             objects.push_back({x, y, w, h, speedx, speedy, movefrom, moveuntil, ObjectType::BOUNCE, false});
             TileMapGroup->AddNewObject(new Engine::Image("play/bounce1.png", x, y, w, h));
         } else if (type == "MS") {
+            fin >> speedx >> moveuntil;
             objects.push_back({x, y, w, h, speedx, speedy,movefrom,  moveuntil, ObjectType::SPIKE, false});
             TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", x, y, w, h));
         } else if (type == "FF") {

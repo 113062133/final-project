@@ -131,6 +131,8 @@ void Player::Update(float deltaTime) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::REVERSE_SPIKE) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
+            } else if (obj.type == PlayScene::ObjectType::MOVE_SPIKE) {
+                Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::FAKE_DOOR && obj.activated) {
@@ -191,6 +193,8 @@ void Player::Update(float deltaTime) {
             } else if (obj.type == PlayScene::ObjectType::SPIKE) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::REVERSE_SPIKE) {
+                Engine::GameEngine::GetInstance().ChangeScene("play");
+            } else if (obj.type == PlayScene::ObjectType::MOVE_SPIKE) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
