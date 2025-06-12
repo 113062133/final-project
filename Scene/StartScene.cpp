@@ -35,6 +35,7 @@ void StartScene::Initialize() {
     btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/yellow.png", 180, halfH + 30, 70, 70);
     btn->SetOnClickCallback(std::bind(&StartScene::PlayOnClick, this, 2));
     AddNewControlObject(btn);
+    AddNewObject(new Engine::Label("2", "pirulen.ttf", 60, 215 , halfH + 65, 0, 0, 150, 255, 0.5, 0.5));
 
     //level 3 button
     btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/yellow.png", 360, halfH - 20, 70, 70);
