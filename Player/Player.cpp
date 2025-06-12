@@ -35,10 +35,15 @@ PlayScene* Player::getPlayScene() {
     return dynamic_cast<PlayScene*>(Engine::GameEngine::GetInstance().GetActiveScene());
 }
 
-Player::Player(std::string img, float x, float y, float w, float h)
+Player::Player(std::string img ,float x, float y, float w, float h)
     : Engine::Sprite(img, x, y, w, h, 0, 0), velocityY(0), onGround(true), playScene(getPlayScene()),
       isMovingLeft(false), isMovingRight(false), moveSpeed(200), gravity(1000), jumpSpeed(400) {
-        // 把地板資料指標存起來
+        // 載入 5 張原始貼圖
+        for (int i = 1; i <= 5; ++i) {
+            std::string path = "play/player-" + std::to_string(i) + ".png";
+            auto bmp = Engine::Resources::GetInstance().GetBitmap(path);
+            frames.push_back(bmp);
+        }
       }
 
 bool Player::IsColliding(float ax, float ay, float aw, float ah,
@@ -48,6 +53,19 @@ bool Player::IsColliding(float ax, float ay, float aw, float ah,
 }
 
 void Player::Update(float deltaTime) {
+    // —— 動畫邏輯 —— //
+    if (isMovingRight || isMovingLeft) {
+        frameTimer += deltaTime;
+        if (frameTimer >= frameDelay) {
+            frameTimer -= frameDelay;
+            // 推進序列位置
+            seqPos = (seqPos + 1) % (isMovingRight ? seqRight.size() : seqLeft.size());
+        }
+    } else {
+        // 靜止時重設到序列開頭
+        seqPos = 0;
+    }
+
     // 檢查透明方塊碰撞
     for (auto& block : playScene->triggerBlocks) {
         if (IsColliding(Position.x, Position.y, Size.x, Size.y,
@@ -223,6 +241,23 @@ void Player::Update(float deltaTime) {
 
 void Player::Draw() const {
     Sprite::Draw();
+
+     // 選對序列、取出 shared_ptr，再取 raw pointer
+    int idx = 0;
+    if (isMovingRight)      idx = seqRight[seqPos];
+    else if (isMovingLeft)  idx = seqLeft[seqPos];
+    // 否則保持 idx = 0
+
+    ALLEGRO_BITMAP* bmp = frames[idx].get();
+    int srcW = al_get_bitmap_width(bmp);
+    int srcH = al_get_bitmap_height(bmp);
+    al_draw_scaled_bitmap(
+        bmp,
+        0, 0, srcW, srcH,
+        Position.x, Position.y,
+        Size.x, Size.y,
+        0
+    );
 }
 
 void Player::Jump() {
