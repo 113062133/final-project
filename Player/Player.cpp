@@ -112,7 +112,9 @@ void Player::Update(float deltaTime) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
-            }  else if (obj.type == PlayScene::ObjectType::FAKE_DOOR && obj.activated) {
+            } else if (obj.type == PlayScene::ObjectType::FAKE_DOOR && obj.activated) {
+                Engine::GameEngine::GetInstance().ChangeScene("play");
+            } else if (obj.type == PlayScene::ObjectType::BALL && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             }else if (obj.type == PlayScene::ObjectType::BOUNCE) {
                 if (onGround) {
@@ -170,11 +172,12 @@ void Player::Update(float deltaTime) {
             } else if (obj.type == PlayScene::ObjectType::SPIKE) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
-                
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::FAKE_DOOR && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
-            }else if (obj.type == PlayScene::ObjectType::BOUNCE) {
+            } else if (obj.type == PlayScene::ObjectType::BALL && obj.activated) {
+                Engine::GameEngine::GetInstance().ChangeScene("play");
+            } else if (obj.type == PlayScene::ObjectType::BOUNCE) {
                 if (onGround) {
                     velocityY = -1500;
                     onGround = false;
