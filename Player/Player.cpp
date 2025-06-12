@@ -58,6 +58,10 @@ void Player::Update(float deltaTime) {
                     playScene->objects.push_back({block.target->x, block.target->y - 20, block.target->w, 20, 0, 0,0, PlayScene::ObjectType::SPIKE});
                     playScene->TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", block.target->x, block.target->y - 20, block.target->w, 20));
                 }
+                else if(block.target->type == PlayScene::ObjectType::PORTAL){
+                    Position.x = block.target->w;
+                    Position.y = block.target->h;
+                }            
             }
         }
     }

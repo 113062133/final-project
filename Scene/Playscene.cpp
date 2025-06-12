@@ -247,6 +247,10 @@ void PlayScene::ReadMap() {
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
             objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::SPIKE_FLOOR, false, img});
+        } else if (type == "POR") {
+            auto* img = new Engine::Image("play/portal.png", x, y, 32, 32);//32*32
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::PORTAL, false, img});
         } else if (type == "T") {
             float target_x, target_y;
             fin >> type >> target_x >> target_y;
