@@ -80,6 +80,14 @@ void Player::Update(float deltaTime) {
                     Position.x = block.target->w;
                     Position.y = block.target->h;
                 }            
+                else if(block.target->type == PlayScene::ObjectType::FAKE_DOOR){
+                    playScene->objects.push_back({block.target->x, block.target->y - 20, block.target->w, 20, 0, 0,0,0, PlayScene::ObjectType::SPIKE, false});
+                    playScene->TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", block.target->x, block.target->y , block.target->w, 50));
+                }
+                else if(block.target->type == PlayScene::ObjectType::FAKE_WALL){
+                    playScene->objects.push_back({block.target->x, block.target->y - 20, block.target->w, 20, 0, 0,0,0, PlayScene::ObjectType::DOOR, false});
+                    playScene->TileMapGroup->AddNewObject(new Engine::Image("play/door.png", block.target->x, block.target->y +50 , block.target->w, 50));
+                }
             }
         }
     }
@@ -110,7 +118,7 @@ void Player::Update(float deltaTime) {
                 if (dx > 0) Position.x = obj.x - Size.x; // 從右撞牆
                 else if (dx < 0) Position.x = obj.x + obj.w; // 從左撞牆
             }
-            else if (obj.type == PlayScene::ObjectType::DOOR) {
+            else if (obj.type == PlayScene::ObjectType::DOOR||obj.type == PlayScene::ObjectType::FAKE_WALL) {
                 // 門：切換場景（示例）
                 if(playScene -> flag == 0){
                     auto falling = new Engine::Image("stage-select/background2.png", 0, -832, 1600, 832);
@@ -122,11 +130,11 @@ void Player::Update(float deltaTime) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
-            } else if (obj.type == PlayScene::ObjectType::REVERSE_SPIKE) {
+            } else if (obj.type == PlayScene::ObjectType::FAKE_DOOR && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
-            } else if (obj.type == PlayScene::ObjectType::BALL) {
+            } else if (obj.type == PlayScene::ObjectType::BALL && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
-            } else if (obj.type == PlayScene::ObjectType::BOUNCE) {
+            }else if (obj.type == PlayScene::ObjectType::BOUNCE) {
                 if (onGround) {
                     velocityY = -1500;
                     onGround = false;
@@ -183,9 +191,9 @@ void Player::Update(float deltaTime) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
-            } else if (obj.type == PlayScene::ObjectType::REVERSE_SPIKE) {
+            } else if (obj.type == PlayScene::ObjectType::FAKE_DOOR && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
-            } else if (obj.type == PlayScene::ObjectType::BALL) {
+            } else if (obj.type == PlayScene::ObjectType::BALL && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::BOUNCE) {
                 if (onGround) {
