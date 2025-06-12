@@ -243,7 +243,7 @@ void PlayScene::ReadMap() {
         } else if (type =="FD") {
             auto* img = new Engine::Image("play/door.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
-            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::FAKE_DOOR, false, img});
+            objects.push_back({x, y, w, h, speedx, speedy, movefrom, moveuntil, ObjectType::FAKE_DOOR, false, img});
         } else if (type == "S") {
             objects.push_back({x, y, w, h, speedx, speedy, movefrom, moveuntil, ObjectType::SPIKE, false});
             TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", x, y, w, h));
@@ -288,7 +288,7 @@ void PlayScene::ReadMap() {
         } else if (type =="FW") {
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
-            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::FAKE_WALL, false, img});
+            objects.push_back({x, y, w, h, speedx, speedy, movefrom, moveuntil, ObjectType::FAKE_WALL, false, img});
         }else if (type == "T") {
             float target_x, target_y;
             fin >> type >> target_x >> target_y;
