@@ -110,6 +110,8 @@ void Player::Update(float deltaTime) {
                 }
             } else if (obj.type == PlayScene::ObjectType::SPIKE) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
+            } else if (obj.type == PlayScene::ObjectType::REVERSE_SPIKE) {
+                Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::FAKE_DOOR && obj.activated) {
@@ -117,10 +119,8 @@ void Player::Update(float deltaTime) {
             } else if (obj.type == PlayScene::ObjectType::BALL && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             }else if (obj.type == PlayScene::ObjectType::BOUNCE) {
-                if (onGround) {
-                    velocityY = -1500;
+                    velocityY = -800;
                     onGround = false;
-                }
             }
         }
     }
@@ -171,6 +171,8 @@ void Player::Update(float deltaTime) {
                 }
             } else if (obj.type == PlayScene::ObjectType::SPIKE) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
+            } else if (obj.type == PlayScene::ObjectType::REVERSE_SPIKE) {
+                Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::FAKE_DOOR && obj.activated) {
@@ -178,10 +180,8 @@ void Player::Update(float deltaTime) {
             } else if (obj.type == PlayScene::ObjectType::BALL && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::BOUNCE) {
-                if (onGround) {
-                    velocityY = -1500;
+                    velocityY = -800;
                     onGround = false;
-                }
             }
         }
     }
