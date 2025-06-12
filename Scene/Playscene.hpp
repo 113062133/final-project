@@ -33,7 +33,7 @@ public:
         TILE_DOOR
     };
 
-    enum class ObjectType { FLOOR, DOOR, SPIKE, REVERSE_SPIKE, BOUNCE, FALL_FLOOR , SPIKE_FLOOR, PUSH_FLOOR, MOVE_FLOOR, PORTAL};
+    enum class ObjectType { FLOOR, DOOR, SPIKE, REVERSE_SPIKE, BOUNCE, FALL_FLOOR , SPIKE_FLOOR, PUSH_FLOOR, MOVE_FLOOR, PORTAL, BALL};
     struct Object {
         float x, y, w, h;
         float speedx = 0;

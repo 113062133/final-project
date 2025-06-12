@@ -130,6 +130,17 @@ void PlayScene::Update(float deltaTime) {
                 obj.type = ObjectType::FLOOR;
             }
         }
+        else if (obj.type == ObjectType::BALL && obj.activated) {
+            obj.y += obj.speedy * deltaTime;
+            if (obj.image) {
+                obj.image->Position.y = obj.y;
+            }
+            // 超出移動範圍就反轉方向
+            if ((obj.speedy > 0 && obj.y >= obj.moveuntil) || (obj.speedy < 0 && obj.y <= obj.moveuntil)) {
+                std::swap(obj.y, obj.moveuntil); // 交換起始與終點
+                obj.speedy = -obj.speedy;
+            }
+        }
     }
 }
 void PlayScene::Draw() const {
@@ -251,6 +262,11 @@ void PlayScene::ReadMap() {
             auto* img = new Engine::Image("play/portal.png", x, y, 32, 32);//32*32
             TileMapGroup->AddNewObject(img);
             objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::PORTAL, false, img});
+        } else if (type == "BAL") {
+            fin >> speedy >> moveuntil;
+            auto* img = new Engine::Image("play/ball.png", x, y, w, h);
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, 0, speedy, moveuntil, ObjectType::BALL, true, img});
         } else if (type == "T") {
             float target_x, target_y;
             fin >> type >> target_x >> target_y;
