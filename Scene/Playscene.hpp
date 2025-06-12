@@ -58,14 +58,14 @@ public:
         if (type == "F") return ObjectType::FLOOR;
         if (type == "D") return ObjectType::DOOR;
         if (type == "S") return ObjectType::SPIKE;
-        if (type == "S") return ObjectType::REVERSE_SPIKE;
-        if (type == "S") return ObjectType::BOUNCE;
+        if (type == "RS") return ObjectType::REVERSE_SPIKE;
+        if (type == "B") return ObjectType::BOUNCE;
         if (type == "FF") return ObjectType::FALL_FLOOR;
         if (type == "PF") return ObjectType::PUSH_FLOOR;
         if (type == "MF") return ObjectType::MOVE_FLOOR;
         if (type == "SF") return ObjectType::SPIKE_FLOOR;
         if (type == "POR") return ObjectType::PORTAL;
-        if (type == "POR") return ObjectType::BALL;
+        if (type == "BAL") return ObjectType::BALL;
         return ObjectType::FLOOR; // 預設值
     }
 
