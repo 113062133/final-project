@@ -99,7 +99,7 @@ void PlayScene::Update(float deltaTime) {
             //fallingBG = nullptr;
             fallingBGDelayTimer = 1.0f;
         }
-        return;
+        return ;
     }
 
     for (auto& obj : objects) {
@@ -117,7 +117,7 @@ void PlayScene::Update(float deltaTime) {
         else if (obj.type == ObjectType::PUSH_FLOOR && obj.activated) {
             float newX = obj.x + obj.speedx * deltaTime;
             // 檢查移動距離
-            if ((obj.speedx < 0 && newX > obj.moveuntil) || (obj.speedx > 0 && newX < obj.moveuntil)) {
+            if ((obj.speedx < 0 && newX >= obj.moveuntil) || (obj.speedx > 0 && newX <= obj.moveuntil)) {
                 obj.x = newX;
                 if (obj.image) {
                     obj.image->Position.x = obj.x;
