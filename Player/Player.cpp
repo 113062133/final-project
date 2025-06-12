@@ -113,13 +113,14 @@ void Player::Update(float deltaTime) {
             }
             else if(obj.type == PlayScene::ObjectType::PUSH_FLOOR){
                 
-                if(obj.activated)
+                if(obj.activated )
                     Position.x += obj.speedx * deltaTime;
                 if (dx > 0) Position.x = obj.x - Size.x; // 從右撞牆
                 else if (dx < 0) Position.x = obj.x + obj.w; // 從左撞牆
             }
             else if (obj.type == PlayScene::ObjectType::DOOR||obj.type == PlayScene::ObjectType::FAKE_WALL) {
                 // 門：切換場景（示例）
+                
                 if(playScene -> flag == 0){
                     auto falling = new Engine::Image("stage-select/background2.png", 0, -832, 1600, 832);
                     playScene -> fallingBG = falling;
