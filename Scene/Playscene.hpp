@@ -38,6 +38,7 @@ public:
         float x, y, w, h;
         float speedx = 0;
         float speedy = 0;
+        float movefrom = 0;
         float moveuntil = 0;
         ObjectType type;
         bool activated = false;
@@ -64,6 +65,7 @@ public:
         if (type == "MF") return ObjectType::MOVE_FLOOR;
         if (type == "SF") return ObjectType::SPIKE_FLOOR;
         if (type == "POR") return ObjectType::PORTAL;
+        if (type == "POR") return ObjectType::BALL;
         return ObjectType::FLOOR; // 預設值
     }
 
