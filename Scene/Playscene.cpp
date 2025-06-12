@@ -268,8 +268,9 @@ void PlayScene::ReadMap() {
             TileMapGroup->AddNewObject(new Engine::Image("play/bounce1.png", x, y, w, h));
         } else if (type == "MS") {
             fin >> speedx >> moveuntil;
-            objects.push_back({x, y, w, h, speedx, speedy,movefrom,  moveuntil, ObjectType::SPIKE, false});
-            TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", x, y, w, h));
+            auto* img = new Engine::Image("play/spike1.png", x, y, w, h);
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, speedx, speedy,movefrom,  moveuntil, ObjectType::MOVE_SPIKE, false,img});
         } else if (type == "FF") {
             fin >> speedy;
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
