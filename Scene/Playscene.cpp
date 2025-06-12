@@ -219,6 +219,9 @@ void PlayScene::ReadMap() {
         } else if (type == "S") {
             objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::SPIKE, false});
             TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", x, y, w, h));
+        } else if (type == "RS") {
+            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::REVERSE_SPIKE, false});
+            TileMapGroup->AddNewObject(new Engine::Image("play/spike2.png", x, y, w, h));
         }  else if (type == "B") {
             objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::BOUNCE, false});
             TileMapGroup->AddNewObject(new Engine::Image("play/bounce1.png", x, y, w, h));
