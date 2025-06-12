@@ -55,9 +55,13 @@ void Player::Update(float deltaTime) {
             if (block.target && !block.target->activated) {
                 block.target->activated = true;
                 if(block.target->type == PlayScene::ObjectType::SPIKE_FLOOR){
-                    playScene->objects.push_back({block.target->x, block.target->y - 20, block.target->w, 20, 0, 0,0, PlayScene::ObjectType::SPIKE});
+                    playScene->objects.push_back({block.target->x, block.target->y - 20, block.target->w, 20, 0, 0,0,0, PlayScene::ObjectType::SPIKE, false});
                     playScene->TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", block.target->x, block.target->y - 20, block.target->w, 20));
                 }
+                else if(block.target->type == PlayScene::ObjectType::PORTAL){
+                    Position.x = block.target->w;
+                    Position.y = block.target->h;
+                }            
                 else if(block.target->type == PlayScene::ObjectType::FAKE_DOOR){
                     playScene->objects.push_back({block.target->x, block.target->y - 20, block.target->w, 20, 0, 0,0, PlayScene::ObjectType::SPIKE});
                     playScene->TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", block.target->x, block.target->y + 30, block.target->w, 20));
@@ -107,8 +111,6 @@ void Player::Update(float deltaTime) {
             } else if (obj.type == PlayScene::ObjectType::SPIKE) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
-                Engine::GameEngine::GetInstance().ChangeScene("play");
-            } else if (obj.type == PlayScene::ObjectType::FAKE_DOOR && obj.activated) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::BOUNCE) {
                 if (onGround) {
@@ -166,8 +168,7 @@ void Player::Update(float deltaTime) {
             } else if (obj.type == PlayScene::ObjectType::SPIKE) {
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
-                Engine::GameEngine::GetInstance().ChangeScene("play");
-            } else if (obj.type == PlayScene::ObjectType::FAKE_DOOR && obj.activated) {
+                
                 Engine::GameEngine::GetInstance().ChangeScene("play");
             } else if (obj.type == PlayScene::ObjectType::BOUNCE) {
                 if (onGround) {

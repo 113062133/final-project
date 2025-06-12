@@ -33,11 +33,12 @@ public:
         TILE_DOOR
     };
 
-    enum class ObjectType { FLOOR, DOOR, SPIKE, BOUNCE, FALL_FLOOR , SPIKE_FLOOR, PUSH_FLOOR, MOVE_FLOOR, FAKE_DOOR, FAKE_WALL};
+    enum class ObjectType { FLOOR, DOOR, SPIKE, BOUNCE, FALL_FLOOR , SPIKE_FLOOR, PUSH_FLOOR, MOVE_FLOOR};
     struct Object {
         float x, y, w, h;
         float speedx = 0;
         float speedy = 0;
+        float movefrom = 0;
         float moveuntil = 0;
         ObjectType type;
         bool activated = false;
@@ -57,12 +58,16 @@ public:
         if (type == "F") return ObjectType::FLOOR;
         if (type == "D") return ObjectType::DOOR;
         if (type == "S") return ObjectType::SPIKE;
+        if (type == "S") return ObjectType::REVERSE_SPIKE;
+        if (type == "S") return ObjectType::BOUNCE;
         if (type == "FF") return ObjectType::FALL_FLOOR;
         if (type == "PF") return ObjectType::PUSH_FLOOR;
         if (type == "MF") return ObjectType::MOVE_FLOOR;
         if (type == "SF") return ObjectType::SPIKE_FLOOR;
         if (type == "FD") return ObjectType::FAKE_DOOR;
         if (type == "FW") return ObjectType::FAKE_WALL;
+        if (type == "POR") return ObjectType::PORTAL;
+        if (type == "BAL") return ObjectType::BALL;
         return ObjectType::FLOOR; // 預設值
     }
 
@@ -100,6 +105,8 @@ public:
     void OnKeyUp(int keyCode) override;
     void ReadMap();
     void ReadEnemyWave();
+    void BackOnClick();
+    void RestartOnClick();
     void ConstructUI();
     void UIBtnClicked(int id);
     

@@ -62,6 +62,15 @@ void PlayScene::Initialize() {
     ReadMap();
     // Start BGM.
     bgmId = AudioHelper::PlayBGM("play.ogg");
+
+    //back btn
+    Engine::ImageButton *btn;
+    btn = new Engine::ImageButton("play/arrow.png", "play/arrow-1.png", 20, 20, 50, 50);
+    btn->SetOnClickCallback(std::bind(&PlayScene::BackOnClick, this));
+    AddNewControlObject(btn);
+    btn = new Engine::ImageButton("play/restart.png", "play/restart-1.png", 85, 20, 60, 50);
+    btn->SetOnClickCallback(std::bind(&PlayScene::RestartOnClick, this));
+    AddNewControlObject(btn);
 }
 void PlayScene::Terminate() {
     AudioHelper::StopBGM(bgmId);
@@ -90,7 +99,6 @@ void PlayScene::Update(float deltaTime) {
             //fallingBG = nullptr;
             fallingBGDelayTimer = 1.0f;
         }
-        
     }
 
     for (auto& obj : objects) {
@@ -128,6 +136,22 @@ void PlayScene::Update(float deltaTime) {
             } else {
                 obj.activated = false; // 停止移動
                 obj.type = ObjectType::FLOOR;
+            }
+        }
+        else if (obj.type == ObjectType::BALL && obj.activated) {
+            obj.y += obj.speedy * deltaTime;
+            if (obj.image) {
+                obj.image->Position.y = obj.y;
+            }
+
+            // 彈跳範圍控制
+            if (obj.y >= obj.moveuntil) {
+                //obj.y = obj.moveuntil - obj.h;
+                obj.speedy = -std::abs(obj.speedy);
+            }
+            if (obj.y <= obj.movefrom) {
+                //obj.y = obj.movefrom;
+                obj.speedy = std::abs(obj.speedy);
             }
         }
     }
@@ -205,49 +229,62 @@ void PlayScene::ReadMap() {
     
     std::ifstream fin(filename);
     std::string type;
-    float x, y, w, h, speedx = 0,speedy = 0 ,moveuntil = 0;;
+    float x, y, w, h, speedx = 0,speedy = 0, movefrom = 0, moveuntil = 0;;
     while (fin >> type >> x >> y >> w >> h) {
         if (type == "F") {
-            objects.push_back({x, y, w, h, speedx,speedy, moveuntil, ObjectType::FLOOR, false, 0});
+            objects.push_back({x, y, w, h, speedx, speedy, movefrom, moveuntil, ObjectType::FLOOR, false, 0});
             TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", x, y, w, h));
         } else if (type == "P") {
             player = new Player("play/player.png", x, y, w/2, h);
             AddNewObject(player);
         } else if (type == "D") {
-            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::DOOR, false});
+            objects.push_back({x, y, w, h, speedx, speedy, movefrom, moveuntil, ObjectType::DOOR, false});
             TileMapGroup->AddNewObject(new Engine::Image("play/door.png", x, y, w, h));
         } else if (type =="FD") {
             auto* img = new Engine::Image("play/door.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
             objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::FAKE_DOOR, false, img});
         } else if (type == "S") {
-            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::SPIKE, false});
+            objects.push_back({x, y, w, h, speedx, speedy, movefrom, moveuntil, ObjectType::SPIKE, false});
             TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", x, y, w, h));
+        } else if (type == "RS") {
+            objects.push_back({x, y, w, h, speedx, speedy, movefrom, moveuntil, ObjectType::REVERSE_SPIKE, false});
+            TileMapGroup->AddNewObject(new Engine::Image("play/spike2.png", x, y, w, h));
         }  else if (type == "B") {
-            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::BOUNCE, false});
+            objects.push_back({x, y, w, h, speedx, speedy, movefrom, moveuntil, ObjectType::BOUNCE, false});
             TileMapGroup->AddNewObject(new Engine::Image("play/bounce1.png", x, y, w, h));
         } else if (type == "MS") {
-            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::SPIKE, false});
+            objects.push_back({x, y, w, h, speedx, speedy,movefrom,  moveuntil, ObjectType::SPIKE, false});
             TileMapGroup->AddNewObject(new Engine::Image("play/spike1.png", x, y, w, h));
         } else if (type == "FF") {
             fin >> speedy;
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
-            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::FALL_FLOOR, false, img});
+            objects.push_back({x, y, w, h, speedx, speedy, movefrom, moveuntil, ObjectType::FALL_FLOOR, false, img});
         } else if (type == "PF") {
             fin >> speedx >> moveuntil;
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
-            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::PUSH_FLOOR, false,img});
+            objects.push_back({x, y, w, h, speedx, speedy,movefrom,  moveuntil, ObjectType::PUSH_FLOOR, false,img});
         } else if (type == "MF") {
             fin >> speedy >> moveuntil;
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
-            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::MOVE_FLOOR, false,img});
+            objects.push_back({x, y, w, h, speedx, speedy,movefrom,  moveuntil, ObjectType::MOVE_FLOOR, false,img});
         } else if (type == "SF") {
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
-            objects.push_back({x, y, w, h, speedx, speedy, moveuntil, ObjectType::SPIKE_FLOOR, false, img});
+            objects.push_back({x, y, w, h, speedx, speedy,movefrom,  moveuntil, ObjectType::SPIKE_FLOOR, false, img});
+        } else if (type == "POR") {
+            auto* img = new Engine::Image("play/portal.png", x, y, 32, 32);//32*32
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, speedx, speedy,movefrom,  moveuntil, ObjectType::PORTAL, false, img});
+        } else if (type == "BAL") {
+            fin >> speedy >> moveuntil;
+            movefrom = y;
+            auto* img = new Engine::Image("play/ball.png", x, y, w, h);
+            TileMapGroup->AddNewObject(img);
+            objects.push_back({x, y, w, h, 0, speedy,movefrom,  moveuntil, ObjectType::BALL, false, img});
         } else if (type =="FW") {
             auto* img = new Engine::Image("play/floor.png", x, y, w, h);
             TileMapGroup->AddNewObject(img);
@@ -287,4 +324,10 @@ void PlayScene::ConstructUI() {
 }
 void PlayScene::UIBtnClicked(int id) {
     
+}
+void PlayScene::BackOnClick() {
+    Engine::GameEngine::GetInstance().ChangeScene("start");
+}
+void PlayScene::RestartOnClick() {
+    Engine::GameEngine::GetInstance().ChangeScene("play");
 }
