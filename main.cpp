@@ -1,6 +1,6 @@
 #include "Engine/GameEngine.hpp"
 #include "Engine/LOG.hpp"
-#include "Scene/PlayScene.hpp"
+#include "Scene/Playscene.hpp"
 #include "Scene/WinScene.hpp"
 #include "Scene/StartScene.h"
 #include "Scene/SettingsScene.hpp"
