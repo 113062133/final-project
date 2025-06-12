@@ -23,6 +23,7 @@ namespace Engine {
         }
     }
     void Image::Draw() const {
+        if (!bmp) return;
         al_draw_scaled_bitmap(bmp.get(), 0, 0, GetBitmapWidth(), GetBitmapHeight(),
                               Position.x - Anchor.x * GetBitmapWidth(), Position.y - Anchor.y * GetBitmapHeight(),
                               Size.x, Size.y, 0);

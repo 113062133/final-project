@@ -99,6 +99,7 @@ void PlayScene::Update(float deltaTime) {
             //fallingBG = nullptr;
             fallingBGDelayTimer = 1.0f;
         }
+        return ;
     }
 
     for (auto& obj : objects) {
