@@ -10,6 +10,7 @@
 - [Medium]
     - player 動畫
     - player 移動
+    - 
 - [Easy]
     - UI 設計(icon, player, 地圖, setting/back/restart btn)，稍微耗時
     - 去背照片
