@@ -84,6 +84,7 @@ void Player::Update(float deltaTime) {
                 else if(block.target->type == PlayScene::ObjectType::PORTAL){
                     Position.x = block.target->w;
                     Position.y = block.target->h;
+                    block.target->activated = false;
                 }            
                 else if(block.target->type == PlayScene::ObjectType::FAKE_DOOR){
                     playScene->objects.push_back({block.target->x, block.target->y - 20, block.target->w, 20, 0, 0,0,0, PlayScene::ObjectType::SPIKE, false});
