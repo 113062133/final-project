@@ -5,6 +5,7 @@
 #include "Engine/Sprite.hpp"
 #include <vector>
 #include <memory>
+#include<string>
 
 class PlayScene;
 

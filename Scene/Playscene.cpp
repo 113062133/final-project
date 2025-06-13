@@ -71,6 +71,10 @@ void PlayScene::Initialize() {
     btn = new Engine::ImageButton("play/restart.png", "play/restart-1.png", 85, 20, 60, 50);
     btn->SetOnClickCallback(std::bind(&PlayScene::RestartOnClick, this));
     AddNewControlObject(btn);
+
+    isalive = true;
+    iswin = false;
+    _deathStartTime = 0.0f;
 }
 void PlayScene::Terminate() {
     AudioHelper::StopBGM(bgmId);
@@ -78,6 +82,13 @@ void PlayScene::Terminate() {
 }
 
 void PlayScene::Update(float deltaTime) {
+    if(isalive == false){
+        _deathStartTime += deltaTime;
+        if(_deathStartTime >= 1.5f){
+            Engine::GameEngine::GetInstance().ChangeScene("play");
+        }
+        return;
+    }
     player->Update(deltaTime);
 
 

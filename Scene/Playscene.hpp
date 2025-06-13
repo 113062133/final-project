@@ -1,10 +1,12 @@
 #ifndef PLAYSCENE_HPP
 #define PLAYSCENE_HPP
+#pragma once
 #include <allegro5/allegro_audio.h>
 #include <list>
 #include <memory>
 #include <utility>
 #include <vector>
+#include<string>
 
 #include "Player/Player.hpp"
 #include "Engine/IScene.hpp"
@@ -24,7 +26,15 @@ private:
     ALLEGRO_SAMPLE_ID bgmId;
     std::shared_ptr<ALLEGRO_SAMPLE_INSTANCE> deathBGMInstance;
 
+
 public:
+    //死亡音效
+    bool isalive = true;
+    bool iswin = false;
+    float  _deathStartTime = 0.0f;
+    
+    void Death();
+    
     enum TileType {
         TILE_DIRT,
         TILE_FLOOR,
@@ -54,6 +64,7 @@ public:
     };
     std::vector<TriggerBlock> triggerBlocks;
 
+    
     ObjectType StringToObjectType(const std::string& type) {
         if (type == "F") return ObjectType::FLOOR;
         if (type == "D") return ObjectType::DOOR;
@@ -110,6 +121,7 @@ public:
     void RestartOnClick();
     void ConstructUI();
     void UIBtnClicked(int id);
+    
     
     Engine::Image* fallingBG = nullptr;
     float fallingBGSpeed = 900.0f;

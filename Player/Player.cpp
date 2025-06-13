@@ -6,7 +6,8 @@
 #include "Engine/IScene.hpp"
 #include <algorithm>
 #include "Scene/FallingBackground.hpp" */
-
+#include<string>
+#include<iostream>
 #include "Engine/AudioHelper.hpp"
 #include "Engine/GameEngine.hpp"
 #include "Engine/Group.hpp"
@@ -53,6 +54,10 @@ bool Player::IsColliding(float ax, float ay, float aw, float ah,
 }
 
 void Player::Update(float deltaTime) {
+    if(playScene->isalive == false){
+        return;
+    }
+    //printf("player update\n");
     // —— 動畫邏輯 —— //
     if (isMovingRight || isMovingLeft) {
         frameTimer += deltaTime;
@@ -120,7 +125,10 @@ void Player::Update(float deltaTime) {
             }
             else if (obj.type == PlayScene::ObjectType::DOOR||obj.type == PlayScene::ObjectType::FAKE_WALL) {
                 // 門：切換場景（示例）
-                
+                if(playScene->iswin == false){
+                    AudioHelper::PlayAudio("yeah.wav");
+                    playScene->iswin = true;
+                }
                 if(playScene -> flag == 0){
                     auto falling = new Engine::Image("stage-select/background2.png", 0, -832, 1600, 832);
                     playScene -> fallingBG = falling;
@@ -128,17 +136,29 @@ void Player::Update(float deltaTime) {
                     playScene -> flag = 1;
                 }
             } else if (obj.type == PlayScene::ObjectType::SPIKE) {
-                Engine::GameEngine::GetInstance().ChangeScene("play");
+                //Engine::GameEngine::GetInstance().ChangeScene("play");
+                playScene->isalive = false;
+                AudioHelper::PlayAudio("break.wav");
             } else if (obj.type == PlayScene::ObjectType::REVERSE_SPIKE) {
-                Engine::GameEngine::GetInstance().ChangeScene("play");
+                //Engine::GameEngine::GetInstance().ChangeScene("play");
+                playScene->isalive = false;
+                AudioHelper::PlayAudio("break.wav");
             } else if (obj.type == PlayScene::ObjectType::MOVE_SPIKE) {
-                Engine::GameEngine::GetInstance().ChangeScene("play");
+                //Engine::GameEngine::GetInstance().ChangeScene("play");
+                playScene->isalive = false;
+                AudioHelper::PlayAudio("break.wav");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
-                Engine::GameEngine::GetInstance().ChangeScene("play");
+                //Engine::GameEngine::GetInstance().ChangeScene("play");
+                playScene->isalive = false;
+                AudioHelper::PlayAudio("break.wav");
             } else if (obj.type == PlayScene::ObjectType::FAKE_DOOR && obj.activated) {
-                Engine::GameEngine::GetInstance().ChangeScene("play");
+                //Engine::GameEngine::GetInstance().ChangeScene("play");
+                playScene->isalive = false;
+                AudioHelper::PlayAudio("break.wav");
             } else if (obj.type == PlayScene::ObjectType::BALL && obj.activated) {
-                Engine::GameEngine::GetInstance().ChangeScene("play");
+                //Engine::GameEngine::GetInstance().ChangeScene("play");
+                playScene->isalive = false;
+                AudioHelper::PlayAudio("falling.wav");
             }else if (obj.type == PlayScene::ObjectType::BOUNCE) {
                     velocityY = -800;
                     onGround = false;
@@ -149,8 +169,10 @@ void Player::Update(float deltaTime) {
     // 垂直移動
     velocityY += gravity * deltaTime;
     Position.y += velocityY * deltaTime;
-    if (Position.y > Engine::GameEngine::GetInstance().GetScreenSize().y + 100) {
-        Engine::GameEngine::GetInstance().ChangeScene("play");
+    if (Position.y > Engine::GameEngine::GetInstance().GetScreenSize().y + 20) {
+        //Engine::GameEngine::GetInstance().ChangeScene("play");
+        playScene->isalive = false;
+        AudioHelper::PlayAudio("falling.wav");
         return;
     }
 
@@ -184,6 +206,12 @@ void Player::Update(float deltaTime) {
                     Position.x += obj.speedx * deltaTime;
             }
             else if (obj.type == PlayScene::ObjectType::DOOR) {
+                if(playScene->iswin == false){
+                    AudioHelper::PlayAudio("yeah.wav");
+                    playScene->iswin = true;
+                }
+                
+                
                 if(playScene -> flag == 0){
                     auto falling = new Engine::Image("stage-select/background2.png", 0, -832, 1600, 832);
                     playScene -> fallingBG = falling;
@@ -191,17 +219,29 @@ void Player::Update(float deltaTime) {
                     playScene -> flag = 1;
                 }
             } else if (obj.type == PlayScene::ObjectType::SPIKE) {
-                Engine::GameEngine::GetInstance().ChangeScene("play");
+                //Engine::GameEngine::GetInstance().ChangeScene("play");
+                playScene->isalive = false;
+                AudioHelper::PlayAudio("break.wav");
             } else if (obj.type == PlayScene::ObjectType::REVERSE_SPIKE) {
-                Engine::GameEngine::GetInstance().ChangeScene("play");
+                //Engine::GameEngine::GetInstance().ChangeScene("play");
+                playScene->isalive = false;
+                AudioHelper::PlayAudio("break.wav");
             } else if (obj.type == PlayScene::ObjectType::MOVE_SPIKE) {
-                Engine::GameEngine::GetInstance().ChangeScene("play");
+                //Engine::GameEngine::GetInstance().ChangeScene("play");
+                playScene->isalive = false;
+                AudioHelper::PlayAudio("break.wav");
             } else if (obj.type == PlayScene::ObjectType::SPIKE_FLOOR && obj.activated) {
-                Engine::GameEngine::GetInstance().ChangeScene("play");
+                //Engine::GameEngine::GetInstance().ChangeScene("play");
+                playScene->isalive = false;
+                AudioHelper::PlayAudio("break.wav");
             } else if (obj.type == PlayScene::ObjectType::FAKE_DOOR && obj.activated) {
-                Engine::GameEngine::GetInstance().ChangeScene("play");
+                //Engine::GameEngine::GetInstance().ChangeScene("play");
+                playScene->isalive = false;
+                AudioHelper::PlayAudio("break.wav");
             } else if (obj.type == PlayScene::ObjectType::BALL && obj.activated) {
-                Engine::GameEngine::GetInstance().ChangeScene("play");
+                //Engine::GameEngine::GetInstance().ChangeScene("play");
+                playScene->isalive = false;
+                AudioHelper::PlayAudio("falling.wav");
             } else if (obj.type == PlayScene::ObjectType::BOUNCE) {
                     velocityY = -800;
                     onGround = false;
