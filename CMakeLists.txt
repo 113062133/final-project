@@ -47,8 +47,8 @@ add_executable(LevelDevil
     Door/Door.cpp
     Door/Door.hpp
     
-    Scene/PlayScene.cpp
-    Scene/PlayScene.hpp
+    Scene/Playscene.cpp
+    Scene/Playscene.hpp
     Scene/SettingsScene.cpp
     Scene/SettingsScene.hpp
     Scene/StartScene.cpp

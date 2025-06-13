@@ -23,7 +23,7 @@ void StartScene::Initialize() {
 
     
     AddNewObject(new Engine::Image("stage-select/background1.png", 0, 0, w, h));
-    AddNewObject(new Engine::Label("IQ   test", "pirulen.ttf", 120, halfW, 120, 209, 150, 102, 255, 0.5, 0.5));
+    AddNewObject(new Engine::Label("you  die  again", "pirulen.ttf", 120, halfW, 120, 209, 150, 102, 255, 0.5, 0.5));
 
     //level 1 button
     btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/yellow.png", 30, halfH - 30, 70, 70);
@@ -116,10 +116,8 @@ void StartScene::Initialize() {
     AddNewObject(new Engine::Label("15", "pirulen.ttf", 55, w - 50 , halfH + 225, 0, 0, 150, 255, 0.5, 0.5));
     
     //level 16 button
-    btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/yellow.png", halfW + 600, halfH / 2 + 170, 110, 110);
-    btn->SetOnClickCallback(std::bind(&StartScene::PlayOnClick, this, 16));
-    AddNewControlObject(btn);
-    AddNewObject(new Engine::Label("16", "pirulen.ttf", 80, halfW + 655 , halfH / 2 + 225, 230, 0, 0, 255, 0.5, 0.5));
+    AddNewObject(new Engine::Image("stage-select/trophy.png", halfW + 550, halfH / 2 + 110, 180, 180));
+    
 
     //settings button
     btn = new Engine::ImageButton("stage-select/setting-button-1.png", "stage-select/setting-button-2.png", 20, h - 70, 50, 50);
