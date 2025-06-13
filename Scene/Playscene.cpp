@@ -84,7 +84,7 @@ void PlayScene::Terminate() {
 void PlayScene::Update(float deltaTime) {
     if(isalive == false){
         _deathStartTime += deltaTime;
-        if(_deathStartTime >= 1.5f){
+        if(_deathStartTime >= 1.2f){
             Engine::GameEngine::GetInstance().ChangeScene("play");
         }
         return;
